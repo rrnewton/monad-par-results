@@ -1,0 +1,215 @@
+# TestName Variant NumThreads   MinTime MedianTime MaxTime
+#    
+# Wed Jan 18 16:32:49 EST 2012
+# Linux schist.cs.indiana.edu 2.6.32-220.2.1.el6.x86_64 #1 SMP Tue Dec 13 16:21:34 EST 2011 x86_64 x86_64 x86_64 GNU/Linux
+# Determined machine to have 4 hardware threads.
+# The Glorious Glasgow Haskell Compilation System, version 7.4.0.20111219
+# 
+# Running each test for 3 trial(s).
+#  ... with compiler options: -O2 -rtsopts
+#  ... with runtime options: -qa -A512K -s
+# Benchmarks_File: benchlist.txt
+# Benchmarks_Variant: desktop
+# Benchmarks_Version: 1.1
+# Git_Branch: master
+# Git_Hash: fa4bbed0a7c7694f1eab4bec053b4bee554c72dc
+# Git_Depth: 253
+# Using the following settings from environment variables:
+#  ENV BENCHLIST=
+#  ENV THREADS=0 1 2 3 4
+#  ENV TRIALS=3
+#  ENV SHORTRUN=
+#  ENV SCHEDS=Trace Direct Sparks
+#  ENV KEEPGOING=1
+#  ENV GHC=ghc-7.4.0.20111219
+#  ENV GHC_FLAGS=-O2
+#  ENV GHC_RTS=-qa -A512K -s
+
+# *** Config [1..?], testing with ./parfib_monad.exe monad 38
+parfib_monad Trace 0 18.35 18.36 18.38
+parfib_monad Trace 1 20.18 20.19 20.24
+parfib_monad Trace 2 11.37 11.38 11.40
+parfib_monad Trace 3 7.95 8.06 8.33
+parfib_monad Trace 4 6.45 6.48 6.64
+parfib_monad Direct 0 13.63 13.63 13.63
+parfib_monad Direct 1 14.32 14.36 14.36
+parfib_monad Direct 2 7.84 7.85 7.86
+parfib_monad Direct 3 5.30 5.35 5.74
+parfib_monad Direct 4 4.23 4.25 4.31
+parfib_monad Sparks 0 1.69 1.69 1.69
+parfib_monad Sparks 1 2.20 2.20 2.20
+parfib_monad Sparks 2 1.32 1.32 1.32
+parfib_monad Sparks 3 0.90 0.90 0.90
+parfib_monad Sparks 4 0.71 0.72 0.76
+
+# *** Config [16..?], testing with ./parfib_monad.exe nested 30
+parfib_monad Trace 0 2.08 2.08 2.08
+parfib_monad Trace 1 2.18 2.18 2.19
+parfib_monad Trace 2 1.40 1.40 1.40
+parfib_monad Trace 3 1.25 1.27 1.34
+parfib_monad Trace 4 1.21 1.23 1.36
+parfib_monad Direct 0 1.77 1.77 1.77
+parfib_monad Direct 1 1.98 1.98 1.98
+parfib_monad Direct 2 TIMEOUT TIMEOUT TIMEOUT
+parfib_monad Direct 3 TIMEOUT TIMEOUT TIMEOUT
+parfib_monad Direct 4 TIMEOUT TIMEOUT TIMEOUT
+parfib_monad Sparks 0 0.06 0.06 0.06
+parfib_monad Sparks 1 0.09 0.09 0.09
+parfib_monad Sparks 2 0.05 0.06 0.06
+parfib_monad Sparks 3 0.04 0.04 0.05
+parfib_monad Sparks 4 0.04 0.04 0.05
+
+# *** Config [31..?], testing with ./blackscholes.exe 10000 15000000
+blackscholes Trace 0 11.45 11.45 11.52
+blackscholes Trace 1 11.42 11.42 11.43
+blackscholes Trace 2 5.88 5.89 5.90
+blackscholes Trace 3 3.96 3.96 3.97
+blackscholes Trace 4 3.06 3.07 3.07
+blackscholes Direct 0 11.42 11.43 11.50
+blackscholes Direct 1 11.44 11.45 11.49
+blackscholes Direct 2 5.93 5.93 5.93
+blackscholes Direct 3 3.98 3.98 3.98
+blackscholes Direct 4 3.07 3.07 3.08
+blackscholes Sparks 0 11.45 11.45 11.46
+blackscholes Sparks 1 11.49 11.49 11.50
+blackscholes Sparks 2 5.94 5.94 5.95
+blackscholes Sparks 3 3.98 3.99 3.99
+blackscholes Sparks 4 3.08 3.09 3.10
+
+# *** Config [46..?], testing with ./nbody.exe 13000
+nbody Trace 0 3.59 3.60 3.69
+nbody Trace 1 3.63 3.63 3.64
+nbody Trace 2 1.91 1.91 1.91
+nbody Trace 3 1.29 1.29 1.29
+nbody Trace 4 1.00 1.00 1.00
+nbody Direct 0 3.55 3.55 3.56
+nbody Direct 1 3.55 3.55 3.55
+nbody Direct 2 1.84 1.84 1.84
+nbody Direct 3 1.24 1.25 1.25
+nbody Direct 4 0.97 0.97 0.97
+
+# *** Config [56..?], testing with ./mandel.exe 2000 2000 3000000
+mandel Trace 0 2.44 2.44 2.45
+mandel Trace 1 2.40 2.40 2.41
+mandel Trace 2 1.45 1.45 1.45
+mandel Trace 3 1.11 1.11 1.12
+mandel Trace 4 1.10 1.12 1.13
+mandel Direct 0 2.45 2.46 2.46
+mandel Direct 1 2.44 2.44 2.44
+mandel Direct 2 1.79 1.79 1.79
+mandel Direct 3 1.50 1.51 1.51
+mandel Direct 4 1.34 1.44 1.48
+mandel Sparks 0 2.40 2.42 2.45
+mandel Sparks 1 2.42 2.42 2.43
+mandel Sparks 2 1.47 1.48 1.49
+mandel Sparks 3 1.13 1.15 1.15
+mandel Sparks 4 1.12 1.15 1.16
+
+# *** Config [71..?], testing with ./coins.exe 8 1250
+coins Trace 0 3.23 3.24 3.24
+coins Trace 1 3.25 3.25 3.25
+coins Trace 2 1.78 1.78 1.79
+coins Trace 3 1.23 1.23 1.28
+coins Trace 4 0.97 0.98 1.01
+coins Direct 0 3.35 3.35 3.36
+coins Direct 1 3.58 3.58 3.59
+coins Direct 2 1.95 1.95 1.96
+coins Direct 3 1.35 1.36 1.38
+coins Direct 4 1.07 1.08 1.09
+coins Sparks 0 3.23 3.23 3.23
+coins Sparks 1 3.26 3.27 3.28
+coins Sparks 2 1.79 1.79 1.79
+coins Sparks 3 1.24 1.24 1.25
+coins Sparks 4 0.98 0.99 1.00
+
+# *** Config [86..?], testing with ./queens.exe 14
+queens Trace 0 ERR ERR ERR
+queens Trace 1 ERR ERR ERR
+queens Trace 2 ERR ERR ERR
+queens Trace 3 ERR ERR ERR
+queens Trace 4 ERR ERR ERR
+queens Direct 0 ERR ERR ERR
+queens Direct 1 ERR ERR ERR
+queens Direct 2 ERR ERR ERR
+queens Direct 3 ERR ERR ERR
+queens Direct 4 ERR ERR ERR
+queens Sparks 0 ERR ERR ERR
+queens Sparks 1 ERR ERR ERR
+queens Sparks 2 ERR ERR ERR
+queens Sparks 3 ERR ERR ERR
+queens Sparks 4 ERR ERR ERR
+
+# *** Config [101..?], testing with ./quicksort/parquicksort_monad.exe 1500000
+quicksort/parquicksort_monad Trace 0 ERR ERR ERR
+quicksort/parquicksort_monad Trace 1 ERR ERR ERR
+quicksort/parquicksort_monad Trace 2 ERR ERR ERR
+quicksort/parquicksort_monad Trace 3 ERR ERR ERR
+quicksort/parquicksort_monad Trace 4 ERR ERR ERR
+quicksort/parquicksort_monad Direct 0 ERR ERR ERR
+quicksort/parquicksort_monad Direct 1 ERR ERR ERR
+quicksort/parquicksort_monad Direct 2 ERR ERR ERR
+quicksort/parquicksort_monad Direct 3 ERR ERR ERR
+quicksort/parquicksort_monad Direct 4 ERR ERR ERR
+quicksort/parquicksort_monad Sparks 0 ERR ERR ERR
+quicksort/parquicksort_monad Sparks 1 ERR ERR ERR
+quicksort/parquicksort_monad Sparks 2 ERR ERR ERR
+quicksort/parquicksort_monad Sparks 3 ERR ERR ERR
+quicksort/parquicksort_monad Sparks 4 ERR ERR ERR
+
+# *** Config [116..?], testing with ./stream/disjoint_working_sets_pipeline.exe monad 4 256 10 10000
+stream/disjoint_working_sets_pipeline Trace 0 1.25 1.26 1.26
+stream/disjoint_working_sets_pipeline Trace 1 1.27 1.29 2.28
+stream/disjoint_working_sets_pipeline Trace 2 0.89 0.90 0.91
+stream/disjoint_working_sets_pipeline Trace 3 0.83 0.87 0.91
+stream/disjoint_working_sets_pipeline Trace 4 0.67 0.68 0.70
+
+# *** Config [121..?], testing with ./partree/partree.exe 600 20
+partree/partree Trace 0 2.30 2.30 2.30
+partree/partree Trace 1 2.43 2.43 2.43
+partree/partree Trace 2 2.56 2.56 2.57
+partree/partree Trace 3 2.61 2.62 2.63
+partree/partree Trace 4 2.75 2.76 2.77
+partree/partree Direct 0 2.27 2.27 2.28
+partree/partree Direct 1 2.38 2.39 2.39
+partree/partree Direct 2 2.52 2.52 2.53
+partree/partree Direct 3 2.59 2.59 2.60
+partree/partree Direct 4 2.70 2.71 2.71
+partree/partree Sparks 0 2.32 2.32 2.33
+partree/partree Sparks 1 2.37 2.38 2.38
+partree/partree Sparks 2 2.52 2.53 2.53
+partree/partree Sparks 3 2.58 2.58 2.59
+partree/partree Sparks 4 2.70 2.71 2.71
+
+# *** Config [136..?], testing with ./matmult/matmult.exe 768 0 64
+matmult/matmult Trace 0 9.87 9.92 9.93
+matmult/matmult Trace 1 10.67 10.78 10.83
+matmult/matmult Trace 2 5.41 5.58 5.82
+matmult/matmult Trace 3 3.21 3.27 3.36
+matmult/matmult Trace 4 2.31 2.37 2.40
+matmult/matmult Direct 0 10.08 10.09 10.14
+matmult/matmult Direct 1 9.75 9.81 9.88
+matmult/matmult Direct 2 4.70 4.93 5.66
+matmult/matmult Direct 3 3.39 3.52 3.58
+matmult/matmult Direct 4 2.52 2.54 2.71
+matmult/matmult Sparks 0 9.95 9.98 9.98
+matmult/matmult Sparks 1 10.76 10.90 10.94
+matmult/matmult Sparks 2 9.76 9.93 10.10
+matmult/matmult Sparks 3 9.39 9.64 10.35
+matmult/matmult Sparks 4 9.17 9.70 9.89
+
+# *** Config [151..?], testing with ./sumeuler/sumeuler.exe 38 8000 100
+sumeuler/sumeuler Trace 0 3.39 3.39 3.39
+sumeuler/sumeuler Trace 1 3.41 3.41 3.41
+sumeuler/sumeuler Trace 2 1.77 1.77 1.77
+sumeuler/sumeuler Trace 3 1.19 1.20 1.20
+sumeuler/sumeuler Trace 4 0.93 0.93 0.93
+sumeuler/sumeuler Direct 0 3.39 3.39 3.39
+sumeuler/sumeuler Direct 1 3.41 3.41 3.41
+sumeuler/sumeuler Direct 2 1.80 1.80 1.80
+sumeuler/sumeuler Direct 3 1.22 1.22 1.22
+sumeuler/sumeuler Direct 4 0.94 0.94 0.95
+sumeuler/sumeuler Sparks 0 3.44 3.44 3.44
+sumeuler/sumeuler Sparks 1 3.54 3.54 3.55
+sumeuler/sumeuler Sparks 2 2.20 2.20 2.21
+sumeuler/sumeuler Sparks 3 1.39 1.39 1.39
+sumeuler/sumeuler Sparks 4 1.04 1.11 1.15
