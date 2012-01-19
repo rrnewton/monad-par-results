@@ -1,0 +1,5 @@
+Machine (3787MB) + Socket #0 + L3 #0 (6144KB)
+  L2 #0 (256KB) + L1 #0 (32KB) + Core #0 + PU #0 (phys=0)
+  L2 #1 (256KB) + L1 #1 (32KB) + Core #1 + PU #1 (phys=1)
+  L2 #2 (256KB) + L1 #2 (32KB) + Core #2 + PU #2 (phys=2)
+  L2 #3 (256KB) + L1 #3 (32KB) + Core #3 + PU #3 (phys=3)

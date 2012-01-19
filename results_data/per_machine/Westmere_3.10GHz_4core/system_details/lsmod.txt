@@ -1,0 +1,113 @@
+Module                  Size  Used by
+fuse                   66285  0 
+nf_conntrack_ipv4       9506  2 
+nf_defrag_ipv4          1483  1 nf_conntrack_ipv4
+iptable_filter          2793  1 
+ip_tables              17831  1 iptable_filter
+des_generic            16604  94 
+cbc                     3083  94 
+nfs                   398303  5 
+lockd                  74270  1 nfs
+fscache                46859  1 nfs
+nfs_acl                 2647  1 nfs
+kspiceusb              38476  1 
+vmmon                  81746  0 
+ebtable_nat             2009  0 
+ebtables               18135  1 ebtable_nat
+xt_CHECKSUM             1303  0 
+bridge                 79790  0 
+autofs4                26888  7 
+bnx2fc                120558  0 
+fcoe                   20748  0 
+libfcoe                39661  2 bnx2fc,fcoe
+libfc                 105924  3 bnx2fc,fcoe,libfcoe
+scsi_transport_fc      52241  3 bnx2fc,fcoe,libfc
+scsi_tgt               12173  1 scsi_transport_fc
+8021q                  23575  0 
+garp                    7344  1 8021q
+stp                     2173  2 bridge,garp
+llc                     5642  3 bridge,garp,stp
+rpcsec_gss_krb5        26893  49 
+auth_rpcgss            44895  4 nfs,rpcsec_gss_krb5
+sunrpc                243758  32 nfs,lockd,nfs_acl,rpcsec_gss_krb5,auth_rpcgss
+cpufreq_ondemand       10448  4 
+acpi_cpufreq            7955  1 
+freq_table              4881  2 cpufreq_ondemand,acpi_cpufreq
+mperf                   1557  1 acpi_cpufreq
+xt_physdev              1741  1 
+ipt_REJECT              2383  2 
+ip6t_REJECT             4628  2 
+nf_conntrack_ipv6       8748  2 
+nf_defrag_ipv6         12182  1 nf_conntrack_ipv6
+xt_state                1492  4 
+nf_conntrack           79453  3 nf_conntrack_ipv4,nf_conntrack_ipv6,xt_state
+ip6table_filter         2889  1 
+ip6_tables             19458  1 ip6table_filter
+vmnet                  49291  13 
+ppdev                   8729  0 
+parport_pc             22978  0 
+parport                37265  2 ppdev,parport_pc
+vmblock                14102  2 
+vsock                  45379  0 
+vmci                   62616  1 vsock
+vhost_net              31384  0 
+macvtap                 9036  1 vhost_net
+macvlan                10180  1 macvtap
+tun                    17051  2 vhost_net
+kvm_intel              50380  0 
+kvm                   305113  1 kvm_intel
+uinput                  8216  0 
+sg                     30124  0 
+microcode             112594  0 
+dcdbas                  9219  0 
+serio_raw               4818  0 
+i2c_i801               11231  0 
+i2c_core               31276  1 i2c_i801
+iTCO_wdt               13662  0 
+iTCO_vendor_support     3088  1 iTCO_wdt
+shpchp                 33482  0 
+fglrx                2991426  50 
+snd_hda_codec_hdmi     24682  1 
+snd_hda_codec_realtek   309541  1 
+snd_hda_intel          25548  2 
+snd_hda_codec          91845  3 snd_hda_codec_hdmi,snd_hda_codec_realtek,snd_hda_intel
+snd_hwdep               6780  1 snd_hda_codec
+snd_seq                56591  0 
+snd_seq_device          6596  1 snd_seq
+snd_pcm                84702  3 snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec
+snd_timer              23057  2 snd_seq,snd_pcm
+snd                    70023  13 snd_hda_codec_hdmi,snd_hda_codec_realtek,snd_hda_intel,snd_hda_codec,snd_hwdep,snd_seq,snd_seq_device,snd_pcm,snd_timer
+soundcore               8086  1 snd
+snd_page_alloc          8630  2 snd_hda_intel,snd_pcm
+ext4                  364410  2 
+mbcache                 8144  1 ext4
+jbd2                   88738  1 ext4
+usb_storage            49452  0 
+sr_mod                 16228  0 
+cdrom                  39803  1 sr_mod
+sd_mod                 39520  4 
+crc_t10dif              1541  1 sd_mod
+video                  21032  0 
+output                  2505  1 video
+ahci                   40455  3 
+e1000e                219404  0 
+dm_mirror              14101  0 
+dm_region_hash         12170  1 dm_mirror
+dm_log                 10122  2 dm_mirror,dm_region_hash
+dm_mod                 81596  2 dm_mirror,dm_log
+be2iscsi               67608  0 
+bnx2i                  45110  0 
+cnic                   53443  2 bnx2fc,bnx2i
+uio                    10974  1 cnic
+ipv6                  322029  88 ip6t_REJECT,nf_conntrack_ipv6,nf_defrag_ipv6,cnic
+cxgb4i                 28169  0 
+cxgb4                  98717  1 cxgb4i
+cxgb3i                 24938  0 
+libcxgbi               52541  2 cxgb4i,cxgb3i
+cxgb3                 153146  1 cxgb3i
+mdio                    4732  1 cxgb3
+libiscsi_tcp           16598  3 cxgb4i,cxgb3i,libcxgbi
+qla4xxx               170419  0 
+iscsi_boot_sysfs        9650  2 be2iscsi,qla4xxx
+libiscsi               47521  7 be2iscsi,bnx2i,cxgb4i,cxgb3i,libcxgbi,libiscsi_tcp,qla4xxx
+scsi_transport_iscsi    48010  5 be2iscsi,bnx2i,libcxgbi,qla4xxx,libiscsi

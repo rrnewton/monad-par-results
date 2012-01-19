@@ -1,0 +1,8 @@
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 001 Device 002: ID 8087:0024 Intel Corp. Integrated Rate Matching Hub
+Bus 002 Device 002: ID 8087:0024 Intel Corp. Integrated Rate Matching Hub
+Bus 001 Device 003: ID 058f:6362 Alcor Micro Corp. Flash Card Reader/Writer
+Bus 002 Device 003: ID 0424:2514 Standard Microsystems Corp. USB 2.0 Hub
+Bus 002 Device 004: ID 413c:2107 Dell Computer Corp. 
+Bus 002 Device 005: ID 046d:c05a Logitech, Inc. Optical Mouse M90
