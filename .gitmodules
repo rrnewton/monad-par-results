@@ -1,0 +1,3 @@
+[submodule "full_logs"]
+	path = full_logs
+	url = https://github.com/rrnewton/monad-par-results-full-logs.git
