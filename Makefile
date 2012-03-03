@@ -19,6 +19,9 @@ getlogs:
 plot: plot_ALL.exe
 	./plot_ALL.exe
 
+deps: 
+	cabal install prettyclass
+
 wipeplots:
 #	ls "*/*/*.summary" 
 #	ls "*/*/*_graphs"
