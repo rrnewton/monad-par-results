@@ -1,0 +1,55 @@
+# TestName Variant NumThreads   MinTime MedianTime MaxTime  Productivity1 Productivity2 Productivity3
+#    
+# Sat Mar  3 22:20:45 EST 2012
+# Linux hive.soic.indiana.edu 2.6.32-220.4.2.el6.x86_64 #1 SMP Mon Feb 6 16:39:28 EST 2012 x86_64 x86_64 x86_64 GNU/Linux
+# Determined machine to have 64 hardware threads.
+# The Glorious Glasgow Haskell Compilation System, version 7.4.1
+# 
+# Running each test for 1 trial(s).
+#  ... with compiler options: -O2 -rtsopts
+#  ... with runtime options: -s -qa -qb -qg
+# Benchmarks_File: benchlist_server.txt
+# Benchmarks_Variant: server
+# Benchmarks_Version: 1.0
+# Git_Branch: meta
+# Git_Hash: c89e95e55a21a634657902d3f5999176e0cbcd7a
+# Git_Depth: 384
+# Using the following settings from environment variables:
+#  ENV BENCHLIST=benchlist_server.txt
+#  ENV THREADS=   32
+#  ENV TRIALS=    
+#  ENV SHORTRUN=  
+#  ENV SCHEDS=    Trace Direct SMP NUMA
+#  ENV KEEPGOING= 1
+#  ENV GHC=       
+#  ENV GHC_FLAGS= 
+#  ENV GHC_RTS=   -s -qa -qb -qg
+#  ENV ENVS=      [[("NUMA_TOPOLOGY","[[0,4,8,12,16,20,24,28],[1,5,9,13,17,21,25,29],[2,6,10,14,18,22,26,30],[3,7,11,15,19,23,27,31]]")]]
+parfib_monad                        monad_38             Trace   32      ERR ERR ERR   
+parfib_monad                        monad_38             Direct  32   6.68 6.68 6.68   95.0 95.0 95.0
+parfib_monad                        monad_38             SMP     32   6.43 6.43 6.43   91.3 91.3 91.3
+parfib_monad                        monad_38             NUMA    32   6.04 6.04 6.04   91.6 91.6 91.6
+blackscholes                        10000_30000000       Trace   32   1.35 1.35 1.35   99.7 99.7 99.7
+blackscholes                        10000_30000000       Direct  32   1.33 1.33 1.33   99.6 99.6 99.6
+blackscholes                        10000_30000000       SMP     32   1.36 1.36 1.36   99.6 99.6 99.6
+blackscholes                        10000_30000000       NUMA    32   1.31 1.31 1.31   99.6 99.6 99.6
+nbody                               25000                Trace   32   1.26 1.26 1.26   99.6 99.6 99.6
+nbody                               25000                Direct  32   0.92 0.92 0.92   99.6 99.6 99.6
+nbody                               25000                SMP     32   0.92 0.92 0.92   99.7 99.7 99.7
+nbody                               25000                NUMA    32   0.96 0.96 0.96   99.7 99.7 99.7
+coins                               8_1600               Trace   32   4.55 4.55 4.55   92.1 92.1 92.1
+coins                               8_1600               Direct  32   4.78 4.78 4.78   92.1 92.1 92.1
+coins                               8_1600               SMP     32   4.91 4.91 4.91   94.1 94.1 94.1
+coins                               8_1600               NUMA    32   4.81 4.81 4.81   94.2 94.2 94.2
+sumeuler/sumeuler                   38_16000_100         Trace   32   2.32 2.32 2.32   98.4 98.4 98.4
+sumeuler/sumeuler                   38_16000_100         Direct  32   1.30 1.30 1.30   98.6 98.6 98.6
+sumeuler/sumeuler                   38_16000_100         SMP     32   1.16 1.16 1.16   99.1 99.1 99.1
+sumeuler/sumeuler                   38_16000_100         NUMA    32   1.16 1.16 1.16   99.3 99.3 99.3
+matmult/MatMult                     1024_0_64            Trace   32   2.48 2.48 2.48   98.8 98.8 98.8
+matmult/MatMult                     1024_0_64            Direct  32   4.87 4.87 4.87   95.0 95.0 95.0
+matmult/MatMult                     1024_0_64            SMP     32   7.11 7.11 7.11   91.4 91.4 91.4
+matmult/MatMult                     1024_0_64            NUMA    32   6.84 6.84 6.84   90.9 90.9 90.9
+partree/partree                     600_20               Trace   32   0.12 0.12 0.12   89.7 89.7 89.7
+partree/partree                     600_20               Direct  32   0.14 0.14 0.14   94.6 94.6 94.6
+partree/partree                     600_20               SMP     32   0.63 0.63 0.63   99.5 99.5 99.5
+partree/partree                     600_20               NUMA    32   0.39 0.39 0.39   99.2 99.2 99.2
