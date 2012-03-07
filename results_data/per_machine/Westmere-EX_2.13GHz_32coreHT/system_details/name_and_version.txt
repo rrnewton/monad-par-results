@@ -1,0 +1,4 @@
+Linux hive.soic.indiana.edu 2.6.32-220.4.2.el6.x86_64 #1 SMP Mon Feb 6 16:39:28 EST 2012 x86_64 x86_64 x86_64 GNU/Linux
+Red Hat Enterprise Linux Server release 6.2 (Santiago)
+Kernel \r on an \m
+
