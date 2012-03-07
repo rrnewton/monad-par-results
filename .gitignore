@@ -1,1 +1,7 @@
 *.exe
+*_graphs
+*.summary
+*.hi
+*.o
+*#
+.#*
