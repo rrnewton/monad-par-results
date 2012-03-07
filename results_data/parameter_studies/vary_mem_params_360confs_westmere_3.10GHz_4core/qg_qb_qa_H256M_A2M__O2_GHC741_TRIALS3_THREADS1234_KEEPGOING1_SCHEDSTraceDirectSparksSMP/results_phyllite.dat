@@ -1,0 +1,135 @@
+# TestName Variant NumThreads   MinTime MedianTime MaxTime  Productivity1 Productivity2 Productivity3
+#    
+# Wed Mar  7 06:10:11 EST 2012
+# Linux phyllite.cs.indiana.edu 2.6.32-220.4.2.el6.x86_64 #1 SMP Mon Feb 6 16:39:28 EST 2012 x86_64 x86_64 x86_64 GNU/Linux
+# Determined machine to have 4 hardware threads.
+# The Glorious Glasgow Haskell Compilation System, version 7.4.1
+# 
+# Running each test for 3 trial(s).
+#  ... with compiler options: -O2 -rtsopts
+#  ... with runtime options: -qg -qb -qa -H256M -A2M -s
+# Benchmarks_File: benchlist.txt
+# Benchmarks_Variant: desktop
+# Benchmarks_Version: 1.2
+# Git_Branch: meta
+# Git_Hash: b29acad576111a1cda0900aa3ccbc5fc5f2e3421
+# Git_Depth: 455
+# Using the following settings from environment variables:
+#  ENV BENCHLIST=
+#  ENV THREADS=   1 2 3 4
+#  ENV TRIALS=    3
+#  ENV SHORTRUN=  
+#  ENV SCHEDS=    Trace Direct Sparks SMP
+#  ENV KEEPGOING= 1
+#  ENV GHC=       ghc-7.4.1
+#  ENV GHC_FLAGS= -O2
+#  ENV GHC_RTS=   -qg -qb -qa -H256M -A2M -s
+#  ENV ENVS=      
+blackscholes                        10000_15000000       Trace   1    11.45 11.46 11.47   99.737 99.737 99.737
+blackscholes                        10000_15000000       Trace   2    5.92 5.93 5.93   99.492 99.493 99.493
+blackscholes                        10000_15000000       Trace   3    3.99 3.99 3.99   99.244 99.246 99.246
+blackscholes                        10000_15000000       Trace   4    3.09 3.09 3.10   99.025 99.025 99.025
+blackscholes                        10000_15000000       Direct  1    11.45 11.46 11.46   99.825 99.825 99.825
+blackscholes                        10000_15000000       Direct  2    5.91 5.92 5.93   99.660 99.661 99.661
+blackscholes                        10000_15000000       Direct  3    3.97 3.98 3.98   99.494 99.494 99.494
+blackscholes                        10000_15000000       Direct  4    3.08 3.08 3.08   99.022 99.346 99.348
+blackscholes                        10000_15000000       Sparks  1    11.46 11.49 11.51   99.825 99.738 99.739
+blackscholes                        10000_15000000       Sparks  2    8.34 8.34 8.38   99.519 99.519 99.522
+blackscholes                        10000_15000000       Sparks  3    4.87 4.89 4.89   99.382 99.383 99.383
+blackscholes                        10000_15000000       Sparks  4    3.55 3.58 3.62   99.152 99.159 99.168
+blackscholes                        10000_15000000       SMP     1    11.48 11.49 11.50   99.825 99.825 99.825
+blackscholes                        10000_15000000       SMP     2    5.93 5.93 5.93   99.493 99.493 99.661
+blackscholes                        10000_15000000       SMP     3    3.98 3.98 3.99   99.244 99.496 99.246
+blackscholes                        10000_15000000       SMP     4    3.09 3.10 3.10   99.025 99.029 99.029
+nbody                               13000                Trace   1    3.77 3.78 3.78   99.734 99.735 99.735
+nbody                               13000                Trace   2    1.93 1.93 1.94   99.481 99.481 99.484
+nbody                               13000                Trace   3    1.29 1.30 1.31   99.224 99.224 99.230
+nbody                               13000                Trace   4    1.01 1.01 1.01   99.000 99.009 99.009
+nbody                               13000                Direct  1    3.70 3.70 3.70   99.729 99.729 99.729
+nbody                               13000                Direct  2    1.91 1.92 1.92   99.479 99.476 99.479
+nbody                               13000                Direct  3    1.30 1.30 1.30   99.224 99.224 99.230
+nbody                               13000                Direct  4    1.00 1.00 1.01   99.000 99.000 99.009
+nbody                               13000                SMP     1    3.67 3.68 3.68   100.00 100.00 100.00
+nbody                               13000                SMP     2    1.92 1.93 1.93   100.00 100.00 100.00
+nbody                               13000                SMP     3    1.30 1.30 1.30   100.00 100.00 100.00
+nbody                               13000                SMP     4    1.01 1.01 1.01   100.00 100.00 100.00
+mandel                              1024_1024_256        Trace   1    5.22 5.22 5.23   96.138 96.138 96.146
+mandel                              1024_1024_256        Trace   2    2.83 2.84 2.85   92.882 92.907 92.882
+mandel                              1024_1024_256        Trace   3    2.02 2.03 2.03   89.949 90.000 90.452
+mandel                              1024_1024_256        Trace   4    1.64 1.65 1.65   88.198 87.577 88.198
+mandel                              1024_1024_256        Direct  1    5.23 5.23 5.23   96.737 96.737 96.737
+mandel                              1024_1024_256        Direct  2    2.86 2.86 2.87   93.639 93.639 93.333
+mandel                              1024_1024_256        Direct  3    2.03 2.03 2.04   90.500 90.500 90.547
+mandel                              1024_1024_256        Direct  4    1.66 1.66 1.66   87.804 87.804 87.804
+mandel                              1024_1024_256        Sparks  1    5.70 5.71 5.71   97.012 97.188 97.192
+mandel                              1024_1024_256        Sparks  2    3.09 3.12 3.12   93.770 93.831 93.831
+mandel                              1024_1024_256        Sparks  3    2.19 2.21 2.21   91.244 90.867 90.867
+mandel                              1024_1024_256        Sparks  4    1.78 1.82 1.82   88.636 88.333 88.826
+mandel                              1024_1024_256        SMP     1    5.39 5.40 5.40   96.834 96.840 96.840
+mandel                              1024_1024_256        SMP     2    2.92 2.93 2.93   93.448 93.470 93.470
+mandel                              1024_1024_256        SMP     3    2.09 2.09 2.10   90.338 90.338 90.384
+mandel                              1024_1024_256        SMP     4    1.74 1.74 1.75   87.790 87.790 87.790
+coins                               8_1250               Trace   1    3.88 3.88 3.88   98.441 98.445 98.445
+coins                               8_1250               Trace   2    2.84 2.84 2.85   97.517 97.526 97.526
+coins                               8_1250               Trace   3    2.69 2.69 2.69   97.378 97.378 97.378
+coins                               8_1250               Trace   4    2.66 2.67 2.67   97.348 97.348 97.358
+coins                               8_1250               Direct  1    4.00 4.00 4.00   98.492 98.492 98.492
+coins                               8_1250               Direct  2    2.86 2.86 2.86   97.543 97.543 97.543
+coins                               8_1250               Direct  3    2.69 2.69 2.69   97.378 97.378 97.388
+coins                               8_1250               Direct  4    2.67 2.67 2.67   97.358 97.358 97.358
+coins                               8_1250               Sparks  1    3.85 3.86 3.86   98.437 98.437 98.437
+coins                               8_1250               Sparks  2    2.82 2.82 2.82   97.857 97.857 97.857
+coins                               8_1250               Sparks  3    2.68 2.68 2.90   97.744 97.752 97.916
+coins                               8_1250               Sparks  4    2.71 2.86 2.88   97.761 97.543 97.894
+coins                               8_1250               SMP     1    3.92 3.92 3.92   98.461 98.461 98.461
+coins                               8_1250               SMP     2    2.86 2.86 2.86   97.535 97.535 97.535
+coins                               8_1250               SMP     3    2.70 2.70 2.71   97.388 97.388 97.397
+coins                               8_1250               SMP     4    2.67 2.67 2.68   97.358 97.358 97.368
+matmult/MatMult                     768_0_64             Trace   1    6.04 6.04 6.06   99.834 99.834 99.834
+matmult/MatMult                     768_0_64             Trace   2    3.23 3.30 3.32   99.689 99.696 99.697
+matmult/MatMult                     768_0_64             Trace   3    2.71 2.75 2.75   97.026 96.715 97.069
+matmult/MatMult                     768_0_64             Trace   4    2.58 2.61 2.90   98.054 98.076 98.269
+matmult/MatMult                     768_0_64             Direct  1    5.91 5.93 5.93   99.830 99.831 99.831
+matmult/MatMult                     768_0_64             Direct  2    3.20 3.20 3.21   99.686 99.686 99.687
+matmult/MatMult                     768_0_64             Direct  3    2.52 2.64 2.71   96.812 96.946 97.026
+matmult/MatMult                     768_0_64             Direct  4    2.74 2.78 2.99   98.168 98.188 98.322
+matmult/MatMult                     768_0_64             Sparks  1    6.35 6.38 6.39   99.842 99.843 99.843
+matmult/MatMult                     768_0_64             Sparks  2    7.24 7.31 7.62   98.755 98.767 98.817
+matmult/MatMult                     768_0_64             Sparks  3    10.03 10.20 10.21   99.401 99.411 99.411
+matmult/MatMult                     768_0_64             Sparks  4    10.40 10.42 10.43   99.518 98.847 98.847
+matmult/MatMult                     768_0_64             SMP     1    6.18 6.21 6.29   100.00 100.00 100.00
+matmult/MatMult                     768_0_64             SMP     2    3.27 3.32 3.32   100.00 100.00 100.00
+matmult/MatMult                     768_0_64             SMP     3    2.89 3.01 3.06   97.560 97.333 97.377
+matmult/MatMult                     768_0_64             SMP     4    2.56 2.75 2.75   98.425 98.529 98.540
+sumeuler/sumeuler                   38_8000_100          Trace   1    3.50 3.50 3.50   99.425 99.425 99.425
+sumeuler/sumeuler                   38_8000_100          Trace   2    1.82 1.82 1.82   98.895 98.895 98.895
+sumeuler/sumeuler                   38_8000_100          Trace   3    1.24 1.24 1.24   98.360 98.360 98.373
+sumeuler/sumeuler                   38_8000_100          Trace   4    0.96 0.97 0.97   97.894 97.894 97.894
+sumeuler/sumeuler                   38_8000_100          Direct  1    3.46 3.47 3.47   99.709 99.710 99.710
+sumeuler/sumeuler                   38_8000_100          Direct  2    1.80 1.81 1.81   99.438 99.441 99.441
+sumeuler/sumeuler                   38_8000_100          Direct  3    1.22 1.22 1.23   99.166 99.166 99.166
+sumeuler/sumeuler                   38_8000_100          Direct  4    0.95 0.95 0.96   98.924 98.924 98.936
+sumeuler/sumeuler                   38_8000_100          Sparks  1    3.49 3.49 3.49   99.711 99.711 99.711
+sumeuler/sumeuler                   38_8000_100          Sparks  2    3.16 3.20 3.29   99.365 99.371 99.388
+sumeuler/sumeuler                   38_8000_100          Sparks  3    1.66 1.68 1.70   98.787 98.802 98.816
+sumeuler/sumeuler                   38_8000_100          Sparks  4    1.17 1.18 1.19   99.130 99.137 99.137
+sumeuler/sumeuler                   38_8000_100          SMP     1    3.47 3.48 3.49   99.710 99.710 99.711
+sumeuler/sumeuler                   38_8000_100          SMP     2    1.81 1.81 1.81   99.441 99.441 99.441
+sumeuler/sumeuler                   38_8000_100          SMP     3    1.23 1.23 1.23   99.166 99.166 99.173
+sumeuler/sumeuler                   38_8000_100          SMP     4    0.96 0.96 0.96   98.936 98.936 98.936
+sorting/mergesort                   cpu_24_8192          Trace   1    4.717646 4.721747 4.949256   95.489 95.496 95.658
+sorting/mergesort                   cpu_24_8192          Trace   2    2.919659 2.922308 2.941727   93.058 93.073 93.088
+sorting/mergesort                   cpu_24_8192          Trace   3    2.513719 2.535683 2.552175   91.666 91.252 91.273
+sorting/mergesort                   cpu_24_8192          Trace   4    2.380809 2.50855 2.565118   90.663 89.976 89.906
+sorting/mergesort                   cpu_24_8192          Direct  1    4.901283 4.903826 4.905226   93.645 93.645 93.655
+sorting/mergesort                   cpu_24_8192          Direct  2    3.042478 3.065862 3.103145   91.966 91.789 91.858
+sorting/mergesort                   cpu_24_8192          Direct  3    2.728087 2.731814 2.877498   89.819 90.293 89.934
+sorting/mergesort                   cpu_24_8192          Direct  4    2.624822 2.655798 2.670476   88.863 88.709 89.041
+sorting/mergesort                   cpu_24_8192          Sparks  1    4.715537 4.718592 4.723043   95.800 95.800 95.800
+sorting/mergesort                   cpu_24_8192          Sparks  2    2.900214 2.913969 2.930132   93.899 93.926 93.952
+sorting/mergesort                   cpu_24_8192          Sparks  3    2.51847 2.596491 2.637865   92.636 92.558 92.396
+sorting/mergesort                   cpu_24_8192          Sparks  4    2.451761 2.464437 2.495033   91.566 91.346 91.428
+sorting/mergesort                   cpu_24_8192          SMP     1    4.811602 4.814595 4.814782   94.018 94.027 94.036
+sorting/mergesort                   cpu_24_8192          SMP     2    3.091108 3.174442 3.186496   91.422 91.581 91.598
+sorting/mergesort                   cpu_24_8192          SMP     3    2.81593 3.010843 3.092941   89.823 90.021 89.979
+sorting/mergesort                   cpu_24_8192          SMP     4    2.891928 2.920988 3.089719   88.888 88.503 88.284
