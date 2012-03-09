@@ -1,0 +1,34 @@
+# TestName Variant NumThreads   MinTime MedianTime MaxTime  Productivity1 Productivity2 Productivity3
+#    
+# Thu Mar  8 18:32:40 EST 2012
+# Linux hive.soic.indiana.edu 2.6.32-220.4.2.el6.x86_64 #1 SMP Mon Feb 6 16:39:28 EST 2012 x86_64 x86_64 x86_64 GNU/Linux
+# Determined machine to have 32 hardware threads.
+# The Glorious Glasgow Haskell Compilation System, version 7.4.1
+# 
+# Running each test for 5 trial(s).
+#  ... with compiler options: -O2 -DAFFINITY -DSTRAT_Clumped -rtsopts
+#  ... with runtime options: -qa -A1M
+# Benchmarks_File: benchlist_server.txt
+# Benchmarks_Variant: server
+# Benchmarks_Version: 1.3
+# Git_Branch: meta
+# Git_Hash: 7f1d639ea9311e6172a2755e4ddb9d0afb443625
+# Git_Depth: 498
+# Using the following settings from environment variables:
+#  ENV BENCHLIST=benchlist_server.txt
+#  ENV THREADS=   2
+#  ENV TRIALS=    5
+#  ENV SHORTRUN=  
+#  ENV SCHEDS=    NUMA
+#  ENV KEEPGOING= 1
+#  ENV GHC=       ghc-7.4.1
+#  ENV GHC_FLAGS= -O2 -DAFFINITY -DSTRAT_Clumped
+#  ENV GHC_RTS=   -qa -A1M
+#  ENV ENVS=      [[("NUMA_TOPOLOGY","[[0,1]]")]]
+blackscholes                        10000_30000000       NUMA    2    16.00 16.06 16.09   98.936 98.940 98.942
+nbody                               25000                NUMA    2    10.39 10.41 10.45   99.518 99.519 99.521
+mandel                              1024_1024_512        NUMA    2    7.87 7.91 7.93   97.077 97.088 97.099
+coins                               8_1600               NUMA    2    8.73 8.75 8.78   89.232 89.016 89.053
+matmult/MatMult                     1024_0_64            NUMA    2    20.29 21.27 22.13   97.928 98.024 98.101
+sumeuler/sumeuler                   38_16000_100         NUMA    2    11.17 11.18 11.23   98.835 98.747 98.753
+sorting/mergesort                   cpu_24_8192          NUMA    2    4.730581 4.789497 4.879066   93.888 93.810 93.699

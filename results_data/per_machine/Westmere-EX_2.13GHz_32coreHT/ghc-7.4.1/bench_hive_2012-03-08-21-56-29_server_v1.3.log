@@ -1,0 +1,1757 @@
+#  ENV ENVS=      [[("NUMA_TOPOLOGY","[[0]]")]]
+Before testing, first 'make clean' for hygiene.
+ -> Succeeded.
+
+--------------------------------------------------------------------------------
+Running all benchmarks for all thread settings in [1]
+Testing 7 total configurations of 7 benchmarks
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+  Compiling Config 1 of 7: blackscholes (args "") scheduler NUMA threaded
+--------------------------------------------------------------------------------
+
+First, creating a directory for intermediate compiler files.
+Compiling with a single GHC command: 
+  ghc-7.4.1 --make ../dist/build/cbits/pin.o -i../ -i./ -outputdir ./build_blackscholes_NUMA_threaded_11929214038909293491 -O2 -DAFFINITY -DSTRAT_Clumped -rtsopts -threaded -fforce-recomp -DPARSCHED="Control.Monad.Par.Meta.NUMAOnly" blackscholes.hs -o blackscholes_NUMA_threaded.exe
+
+    [ 1 of 12] Compiling System.Posix.Affinity ( ../System/Posix/Affinity.hs, build_blackscholes_NUMA_threaded_11929214038909293491/System/Posix/Affinity.o )
+    [ 2 of 12] Compiling Control.Monad.Par.Meta.Resources.Debugging ( ../Control/Monad/Par/Meta/Resources/Debugging.hs, build_blackscholes_NUMA_threaded_11929214038909293491/Control/Monad/Par/Meta/Resources/Debugging.o )
+    [ 3 of 12] Compiling Control.Monad.Par.Meta.HotVar.IORef ( ../Control/Monad/Par/Meta/HotVar/IORef.hs, build_blackscholes_NUMA_threaded_11929214038909293491/Control/Monad/Par/Meta/HotVar/IORef.o )
+    [ 4 of 12] Compiling Control.Monad.Par.Scheds.TraceInternal ( ../Control/Monad/Par/Scheds/TraceInternal.hs, build_blackscholes_NUMA_threaded_11929214038909293491/Control/Monad/Par/Scheds/TraceInternal.o )
+    
+    ../Control/Monad/Par/Scheds/TraceInternal.hs:26:1:
+        Warning: In the use of `forkOnIO'
+                 (imported from GHC.Conc, but defined in GHC.Conc.Sync):
+                 Deprecated: "renamed to forkOn"
+    [ 5 of 12] Compiling Control.Monad.Par.Class ( ../Control/Monad/Par/Class.hs, build_blackscholes_NUMA_threaded_11929214038909293491/Control/Monad/Par/Class.o )
+    [ 6 of 12] Compiling Control.Monad.Par.Scheds.Trace ( ../Control/Monad/Par/Scheds/Trace.hs, build_blackscholes_NUMA_threaded_11929214038909293491/Control/Monad/Par/Scheds/Trace.o )
+    [ 7 of 12] Compiling Control.Monad.Par.Combinator ( ../Control/Monad/Par/Combinator.hs, build_blackscholes_NUMA_threaded_11929214038909293491/Control/Monad/Par/Combinator.o )
+    [ 8 of 12] Compiling Control.Monad.Par.Meta ( ../Control/Monad/Par/Meta.hs, build_blackscholes_NUMA_threaded_11929214038909293491/Control/Monad/Par/Meta.o )
+    [ 9 of 12] Compiling Control.Monad.Par.Meta.Resources.SharedMemory ( ../Control/Monad/Par/Meta/Resources/SharedMemory.hs, build_blackscholes_NUMA_threaded_11929214038909293491/Control/Monad/Par/Meta/Resources/SharedMemory.o )
+    [10 of 12] Compiling Control.Monad.Par.Meta.Resources.NUMA ( ../Control/Monad/Par/Meta/Resources/NUMA.hs, build_blackscholes_NUMA_threaded_11929214038909293491/Control/Monad/Par/Meta/Resources/NUMA.o )
+    [11 of 12] Compiling Control.Monad.Par.Meta.NUMAOnly ( ../Control/Monad/Par/Meta/NUMAOnly.hs, build_blackscholes_NUMA_threaded_11929214038909293491/Control/Monad/Par/Meta/NUMAOnly.o )
+    [12 of 12] Compiling Main             ( blackscholes.hs, build_blackscholes_NUMA_threaded_11929214038909293491/Main.o )
+    Linking blackscholes_NUMA_threaded.exe ...
+
+--------------------------------------------------------------------------------
+  Compiling Config 2 of 7: coins (args "") scheduler NUMA threaded
+--------------------------------------------------------------------------------
+
+First, creating a directory for intermediate compiler files.
+Compiling with a single GHC command: 
+  ghc-7.4.1 --make ../dist/build/cbits/pin.o -i../ -i./ -outputdir ./build_coins_NUMA_threaded_12231845377657147360 -O2 -DAFFINITY -DSTRAT_Clumped -rtsopts -threaded -fforce-recomp -DPARSCHED="Control.Monad.Par.Meta.NUMAOnly" coins.hs -o coins_NUMA_threaded.exe
+
+    [1 of 9] Compiling System.Posix.Affinity ( ../System/Posix/Affinity.hs, build_coins_NUMA_threaded_12231845377657147360/System/Posix/Affinity.o )
+    [2 of 9] Compiling Control.Monad.Par.Meta.Resources.Debugging ( ../Control/Monad/Par/Meta/Resources/Debugging.hs, build_coins_NUMA_threaded_12231845377657147360/Control/Monad/Par/Meta/Resources/Debugging.o )
+    [3 of 9] Compiling Control.Monad.Par.Meta.HotVar.IORef ( ../Control/Monad/Par/Meta/HotVar/IORef.hs, build_coins_NUMA_threaded_12231845377657147360/Control/Monad/Par/Meta/HotVar/IORef.o )
+    [4 of 9] Compiling Control.Monad.Par.Class ( ../Control/Monad/Par/Class.hs, build_coins_NUMA_threaded_12231845377657147360/Control/Monad/Par/Class.o )
+    [5 of 9] Compiling Control.Monad.Par.Meta ( ../Control/Monad/Par/Meta.hs, build_coins_NUMA_threaded_12231845377657147360/Control/Monad/Par/Meta.o )
+    [6 of 9] Compiling Control.Monad.Par.Meta.Resources.SharedMemory ( ../Control/Monad/Par/Meta/Resources/SharedMemory.hs, build_coins_NUMA_threaded_12231845377657147360/Control/Monad/Par/Meta/Resources/SharedMemory.o )
+    [7 of 9] Compiling Control.Monad.Par.Meta.Resources.NUMA ( ../Control/Monad/Par/Meta/Resources/NUMA.hs, build_coins_NUMA_threaded_12231845377657147360/Control/Monad/Par/Meta/Resources/NUMA.o )
+    [8 of 9] Compiling Control.Monad.Par.Meta.NUMAOnly ( ../Control/Monad/Par/Meta/NUMAOnly.hs, build_coins_NUMA_threaded_12231845377657147360/Control/Monad/Par/Meta/NUMAOnly.o )
+    [9 of 9] Compiling Main             ( coins.hs, build_coins_NUMA_threaded_12231845377657147360/Main.o )
+    
+    coins.hs:6:1:
+        Warning: In the use of `unEval'
+                 (imported from Control.Parallel.Strategies):
+                 Deprecated: "renamed to runEval"
+    
+    coins.hs:6:1:
+        Warning: In the use of `rwhnf'
+                 (imported from Control.Parallel.Strategies):
+                 Deprecated: "renamed to rseq"
+    Linking coins_NUMA_threaded.exe ...
+
+--------------------------------------------------------------------------------
+  Compiling Config 3 of 7: mandel (args "") scheduler NUMA threaded
+--------------------------------------------------------------------------------
+
+First, creating a directory for intermediate compiler files.
+Compiling with a single GHC command: 
+  ghc-7.4.1 --make ../dist/build/cbits/pin.o -i../ -i./ -outputdir ./build_mandel_NUMA_threaded_18351913313047640528 -O2 -DAFFINITY -DSTRAT_Clumped -rtsopts -threaded -fforce-recomp -DPARSCHED="Control.Monad.Par.Meta.NUMAOnly" mandel.hs -o mandel_NUMA_threaded.exe
+
+    [ 1 of 13] Compiling System.Posix.Affinity ( ../System/Posix/Affinity.hs, build_mandel_NUMA_threaded_18351913313047640528/System/Posix/Affinity.o )
+    [ 2 of 13] Compiling Control.Monad.Par.Meta.Resources.Debugging ( ../Control/Monad/Par/Meta/Resources/Debugging.hs, build_mandel_NUMA_threaded_18351913313047640528/Control/Monad/Par/Meta/Resources/Debugging.o )
+    [ 3 of 13] Compiling Control.Monad.Par.Meta.HotVar.IORef ( ../Control/Monad/Par/Meta/HotVar/IORef.hs, build_mandel_NUMA_threaded_18351913313047640528/Control/Monad/Par/Meta/HotVar/IORef.o )
+    [ 4 of 13] Compiling Control.Monad.Par.Scheds.TraceInternal ( ../Control/Monad/Par/Scheds/TraceInternal.hs, build_mandel_NUMA_threaded_18351913313047640528/Control/Monad/Par/Scheds/TraceInternal.o )
+    
+    ../Control/Monad/Par/Scheds/TraceInternal.hs:26:1:
+        Warning: In the use of `forkOnIO'
+                 (imported from GHC.Conc, but defined in GHC.Conc.Sync):
+                 Deprecated: "renamed to forkOn"
+    [ 5 of 13] Compiling Control.Monad.Par.Class ( ../Control/Monad/Par/Class.hs, build_mandel_NUMA_threaded_18351913313047640528/Control/Monad/Par/Class.o )
+    [ 6 of 13] Compiling Control.Monad.Par.Scheds.Trace ( ../Control/Monad/Par/Scheds/Trace.hs, build_mandel_NUMA_threaded_18351913313047640528/Control/Monad/Par/Scheds/Trace.o )
+    [ 7 of 13] Compiling Control.Monad.Par.Meta ( ../Control/Monad/Par/Meta.hs, build_mandel_NUMA_threaded_18351913313047640528/Control/Monad/Par/Meta.o )
+    [ 8 of 13] Compiling Control.Monad.Par.Meta.Resources.SharedMemory ( ../Control/Monad/Par/Meta/Resources/SharedMemory.hs, build_mandel_NUMA_threaded_18351913313047640528/Control/Monad/Par/Meta/Resources/SharedMemory.o )
+    [ 9 of 13] Compiling Control.Monad.Par.Meta.Resources.NUMA ( ../Control/Monad/Par/Meta/Resources/NUMA.hs, build_mandel_NUMA_threaded_18351913313047640528/Control/Monad/Par/Meta/Resources/NUMA.o )
+    [10 of 13] Compiling Control.Monad.Par.Meta.NUMAOnly ( ../Control/Monad/Par/Meta/NUMAOnly.hs, build_mandel_NUMA_threaded_18351913313047640528/Control/Monad/Par/Meta/NUMAOnly.o )
+    [11 of 13] Compiling Control.Monad.Par.Combinator ( ../Control/Monad/Par/Combinator.hs, build_mandel_NUMA_threaded_18351913313047640528/Control/Monad/Par/Combinator.o )
+    [12 of 13] Compiling Control.Monad.Par.AList ( ../Control/Monad/Par/AList.hs, build_mandel_NUMA_threaded_18351913313047640528/Control/Monad/Par/AList.o )
+    [13 of 13] Compiling Main             ( mandel.hs, build_mandel_NUMA_threaded_18351913313047640528/Main.o )
+    Linking mandel_NUMA_threaded.exe ...
+
+--------------------------------------------------------------------------------
+  Compiling Config 4 of 7: matmult/MatMult (args "") scheduler NUMA threaded
+--------------------------------------------------------------------------------
+
+First, creating a directory for intermediate compiler files.
+Compiling with a single GHC command: 
+  ghc-7.4.1 --make ../dist/build/cbits/pin.o -i../ -imatmult/ -outputdir ./build_matmult/MatMult_NUMA_threaded_11804193429365128865 -O2 -DAFFINITY -DSTRAT_Clumped -rtsopts -threaded -fforce-recomp -DPARSCHED="Control.Monad.Par.Meta.NUMAOnly" matmult/MatMult.hs -o matmult/MatMult_NUMA_threaded.exe
+
+    [ 1 of 13] Compiling System.Posix.Affinity ( ../System/Posix/Affinity.hs, build_matmult/MatMult_NUMA_threaded_11804193429365128865/System/Posix/Affinity.o )
+    [ 2 of 13] Compiling Control.Monad.Par.Meta.Resources.Debugging ( ../Control/Monad/Par/Meta/Resources/Debugging.hs, build_matmult/MatMult_NUMA_threaded_11804193429365128865/Control/Monad/Par/Meta/Resources/Debugging.o )
+    [ 3 of 13] Compiling Control.Monad.Par.Meta.HotVar.IORef ( ../Control/Monad/Par/Meta/HotVar/IORef.hs, build_matmult/MatMult_NUMA_threaded_11804193429365128865/Control/Monad/Par/Meta/HotVar/IORef.o )
+    [ 4 of 13] Compiling Control.Monad.Par.Scheds.TraceInternal ( ../Control/Monad/Par/Scheds/TraceInternal.hs, build_matmult/MatMult_NUMA_threaded_11804193429365128865/Control/Monad/Par/Scheds/TraceInternal.o )
+    
+    ../Control/Monad/Par/Scheds/TraceInternal.hs:26:1:
+        Warning: In the use of `forkOnIO'
+                 (imported from GHC.Conc, but defined in GHC.Conc.Sync):
+                 Deprecated: "renamed to forkOn"
+    [ 5 of 13] Compiling Control.Monad.Par.Class ( ../Control/Monad/Par/Class.hs, build_matmult/MatMult_NUMA_threaded_11804193429365128865/Control/Monad/Par/Class.o )
+    [ 6 of 13] Compiling Control.Monad.Par.Scheds.Trace ( ../Control/Monad/Par/Scheds/Trace.hs, build_matmult/MatMult_NUMA_threaded_11804193429365128865/Control/Monad/Par/Scheds/Trace.o )
+    [ 7 of 13] Compiling Control.Monad.Par.Meta ( ../Control/Monad/Par/Meta.hs, build_matmult/MatMult_NUMA_threaded_11804193429365128865/Control/Monad/Par/Meta.o )
+    [ 8 of 13] Compiling Control.Monad.Par.Meta.Resources.SharedMemory ( ../Control/Monad/Par/Meta/Resources/SharedMemory.hs, build_matmult/MatMult_NUMA_threaded_11804193429365128865/Control/Monad/Par/Meta/Resources/SharedMemory.o )
+    [ 9 of 13] Compiling Control.Monad.Par.Meta.Resources.NUMA ( ../Control/Monad/Par/Meta/Resources/NUMA.hs, build_matmult/MatMult_NUMA_threaded_11804193429365128865/Control/Monad/Par/Meta/Resources/NUMA.o )
+    [10 of 13] Compiling Control.Monad.Par.Meta.NUMAOnly ( ../Control/Monad/Par/Meta/NUMAOnly.hs, build_matmult/MatMult_NUMA_threaded_11804193429365128865/Control/Monad/Par/Meta/NUMAOnly.o )
+    [11 of 13] Compiling Control.Monad.Par.Combinator ( ../Control/Monad/Par/Combinator.hs, build_matmult/MatMult_NUMA_threaded_11804193429365128865/Control/Monad/Par/Combinator.o )
+    [12 of 13] Compiling ListAux          ( matmult/ListAux.hs, build_matmult/MatMult_NUMA_threaded_11804193429365128865/ListAux.o )
+    [13 of 13] Compiling Main             ( matmult/MatMult.hs, build_matmult/MatMult_NUMA_threaded_11804193429365128865/Main.o )
+    Linking matmult/MatMult_NUMA_threaded.exe ...
+
+--------------------------------------------------------------------------------
+  Compiling Config 5 of 7: nbody (args "") scheduler NUMA threaded
+--------------------------------------------------------------------------------
+
+First, creating a directory for intermediate compiler files.
+Compiling with a single GHC command: 
+  ghc-7.4.1 --make ../dist/build/cbits/pin.o -i../ -i./ -outputdir ./build_nbody_NUMA_threaded_10941957589778562575 -O2 -DAFFINITY -DSTRAT_Clumped -rtsopts -threaded -fforce-recomp -DPARSCHED="Control.Monad.Par.Meta.NUMAOnly" nbody.hs -o nbody_NUMA_threaded.exe
+
+    
+    nbody.hs:6:12:
+        Warning: -fglasgow-exts is deprecated: Use individual extensions instead
+    [1 of 9] Compiling System.Posix.Affinity ( ../System/Posix/Affinity.hs, build_nbody_NUMA_threaded_10941957589778562575/System/Posix/Affinity.o )
+    [2 of 9] Compiling Control.Monad.Par.Meta.Resources.Debugging ( ../Control/Monad/Par/Meta/Resources/Debugging.hs, build_nbody_NUMA_threaded_10941957589778562575/Control/Monad/Par/Meta/Resources/Debugging.o )
+    [3 of 9] Compiling Control.Monad.Par.Meta.HotVar.IORef ( ../Control/Monad/Par/Meta/HotVar/IORef.hs, build_nbody_NUMA_threaded_10941957589778562575/Control/Monad/Par/Meta/HotVar/IORef.o )
+    [4 of 9] Compiling Control.Monad.Par.Class ( ../Control/Monad/Par/Class.hs, build_nbody_NUMA_threaded_10941957589778562575/Control/Monad/Par/Class.o )
+    [5 of 9] Compiling Control.Monad.Par.Meta ( ../Control/Monad/Par/Meta.hs, build_nbody_NUMA_threaded_10941957589778562575/Control/Monad/Par/Meta.o )
+    [6 of 9] Compiling Control.Monad.Par.Meta.Resources.SharedMemory ( ../Control/Monad/Par/Meta/Resources/SharedMemory.hs, build_nbody_NUMA_threaded_10941957589778562575/Control/Monad/Par/Meta/Resources/SharedMemory.o )
+    [7 of 9] Compiling Control.Monad.Par.Meta.Resources.NUMA ( ../Control/Monad/Par/Meta/Resources/NUMA.hs, build_nbody_NUMA_threaded_10941957589778562575/Control/Monad/Par/Meta/Resources/NUMA.o )
+    [8 of 9] Compiling Control.Monad.Par.Meta.NUMAOnly ( ../Control/Monad/Par/Meta/NUMAOnly.hs, build_nbody_NUMA_threaded_10941957589778562575/Control/Monad/Par/Meta/NUMAOnly.o )
+    [9 of 9] Compiling Main             ( nbody.hs, build_nbody_NUMA_threaded_10941957589778562575/Main.o )
+    Linking nbody_NUMA_threaded.exe ...
+
+--------------------------------------------------------------------------------
+  Compiling Config 6 of 7: sorting/mergesort (args "") scheduler NUMA threaded
+--------------------------------------------------------------------------------
+
+First, creating a directory for intermediate compiler files.
+Compiling with a single GHC command: 
+  ghc-7.4.1 --make ../dist/build/cbits/pin.o -i../ -isorting/ -outputdir ./build_sorting/mergesort_NUMA_threaded_12476474024017104124 -O2 -DAFFINITY -DSTRAT_Clumped -rtsopts -threaded -fforce-recomp -DPARSCHED="Control.Monad.Par.Meta.NUMAOnly" sorting/mergesort.hs -o sorting/mergesort_NUMA_threaded.exe
+
+    [1 of 9] Compiling System.Posix.Affinity ( ../System/Posix/Affinity.hs, build_sorting/mergesort_NUMA_threaded_12476474024017104124/System/Posix/Affinity.o )
+    [2 of 9] Compiling Control.Monad.Par.Meta.Resources.Debugging ( ../Control/Monad/Par/Meta/Resources/Debugging.hs, build_sorting/mergesort_NUMA_threaded_12476474024017104124/Control/Monad/Par/Meta/Resources/Debugging.o )
+    [3 of 9] Compiling Control.Monad.Par.Meta.HotVar.IORef ( ../Control/Monad/Par/Meta/HotVar/IORef.hs, build_sorting/mergesort_NUMA_threaded_12476474024017104124/Control/Monad/Par/Meta/HotVar/IORef.o )
+    [4 of 9] Compiling Control.Monad.Par.Class ( ../Control/Monad/Par/Class.hs, build_sorting/mergesort_NUMA_threaded_12476474024017104124/Control/Monad/Par/Class.o )
+    [5 of 9] Compiling Control.Monad.Par.Meta ( ../Control/Monad/Par/Meta.hs, build_sorting/mergesort_NUMA_threaded_12476474024017104124/Control/Monad/Par/Meta.o )
+    [6 of 9] Compiling Control.Monad.Par.Meta.Resources.SharedMemory ( ../Control/Monad/Par/Meta/Resources/SharedMemory.hs, build_sorting/mergesort_NUMA_threaded_12476474024017104124/Control/Monad/Par/Meta/Resources/SharedMemory.o )
+    [7 of 9] Compiling Control.Monad.Par.Meta.Resources.NUMA ( ../Control/Monad/Par/Meta/Resources/NUMA.hs, build_sorting/mergesort_NUMA_threaded_12476474024017104124/Control/Monad/Par/Meta/Resources/NUMA.o )
+    [8 of 9] Compiling Control.Monad.Par.Meta.NUMAOnly ( ../Control/Monad/Par/Meta/NUMAOnly.hs, build_sorting/mergesort_NUMA_threaded_12476474024017104124/Control/Monad/Par/Meta/NUMAOnly.o )
+    [9 of 9] Compiling Main             ( sorting/mergesort.hs, build_sorting/mergesort_NUMA_threaded_12476474024017104124/Main.o )
+    Linking sorting/mergesort_NUMA_threaded.exe ...
+
+--------------------------------------------------------------------------------
+  Compiling Config 7 of 7: sumeuler/sumeuler (args "") scheduler NUMA threaded
+--------------------------------------------------------------------------------
+
+First, creating a directory for intermediate compiler files.
+Compiling with a single GHC command: 
+  ghc-7.4.1 --make ../dist/build/cbits/pin.o -i../ -isumeuler/ -outputdir ./build_sumeuler/sumeuler_NUMA_threaded_1424970228289198264 -O2 -DAFFINITY -DSTRAT_Clumped -rtsopts -threaded -fforce-recomp -DPARSCHED="Control.Monad.Par.Meta.NUMAOnly" sumeuler/sumeuler.hs -o sumeuler/sumeuler_NUMA_threaded.exe
+
+    [ 1 of 14] Compiling System.Posix.Affinity ( ../System/Posix/Affinity.hs, build_sumeuler/sumeuler_NUMA_threaded_1424970228289198264/System/Posix/Affinity.o )
+    [ 2 of 14] Compiling Control.Monad.Par.Meta.Resources.Debugging ( ../Control/Monad/Par/Meta/Resources/Debugging.hs, build_sumeuler/sumeuler_NUMA_threaded_1424970228289198264/Control/Monad/Par/Meta/Resources/Debugging.o )
+    [ 3 of 14] Compiling Control.Monad.Par.Meta.HotVar.IORef ( ../Control/Monad/Par/Meta/HotVar/IORef.hs, build_sumeuler/sumeuler_NUMA_threaded_1424970228289198264/Control/Monad/Par/Meta/HotVar/IORef.o )
+    [ 4 of 14] Compiling Control.Monad.Par.Scheds.TraceInternal ( ../Control/Monad/Par/Scheds/TraceInternal.hs, build_sumeuler/sumeuler_NUMA_threaded_1424970228289198264/Control/Monad/Par/Scheds/TraceInternal.o )
+    
+    ../Control/Monad/Par/Scheds/TraceInternal.hs:26:1:
+        Warning: In the use of `forkOnIO'
+                 (imported from GHC.Conc, but defined in GHC.Conc.Sync):
+                 Deprecated: "renamed to forkOn"
+    [ 5 of 14] Compiling Control.Monad.Par.Class ( ../Control/Monad/Par/Class.hs, build_sumeuler/sumeuler_NUMA_threaded_1424970228289198264/Control/Monad/Par/Class.o )
+    [ 6 of 14] Compiling Control.Monad.Par.Scheds.Trace ( ../Control/Monad/Par/Scheds/Trace.hs, build_sumeuler/sumeuler_NUMA_threaded_1424970228289198264/Control/Monad/Par/Scheds/Trace.o )
+    [ 7 of 14] Compiling Control.Monad.Par.Meta ( ../Control/Monad/Par/Meta.hs, build_sumeuler/sumeuler_NUMA_threaded_1424970228289198264/Control/Monad/Par/Meta.o )
+    [ 8 of 14] Compiling Control.Monad.Par.Meta.Resources.SharedMemory ( ../Control/Monad/Par/Meta/Resources/SharedMemory.hs, build_sumeuler/sumeuler_NUMA_threaded_1424970228289198264/Control/Monad/Par/Meta/Resources/SharedMemory.o )
+    [ 9 of 14] Compiling Control.Monad.Par.Meta.Resources.NUMA ( ../Control/Monad/Par/Meta/Resources/NUMA.hs, build_sumeuler/sumeuler_NUMA_threaded_1424970228289198264/Control/Monad/Par/Meta/Resources/NUMA.o )
+    [10 of 14] Compiling Control.Monad.Par.Meta.NUMAOnly ( ../Control/Monad/Par/Meta/NUMAOnly.hs, build_sumeuler/sumeuler_NUMA_threaded_1424970228289198264/Control/Monad/Par/Meta/NUMAOnly.o )
+    [11 of 14] Compiling Control.Monad.Par.Combinator ( ../Control/Monad/Par/Combinator.hs, build_sumeuler/sumeuler_NUMA_threaded_1424970228289198264/Control/Monad/Par/Combinator.o )
+    [12 of 14] Compiling SumEulerPrimes   ( sumeuler/SumEulerPrimes.hs, build_sumeuler/sumeuler_NUMA_threaded_1424970228289198264/SumEulerPrimes.o )
+    [13 of 14] Compiling ListAux          ( sumeuler/ListAux.hs, build_sumeuler/sumeuler_NUMA_threaded_1424970228289198264/ListAux.o )
+    [14 of 14] Compiling Main             ( sumeuler/sumeuler.hs, build_sumeuler/sumeuler_NUMA_threaded_1424970228289198264/Main.o )
+    Linking sumeuler/sumeuler_NUMA_threaded.exe ...
+
+--------------------------------------------------------------------------------
+  Running Config 1 of 7: blackscholes (args "10000 30000000") scheduler NUMA  threads 1 (Env=[("NUMA_TOPOLOGY","[[0]]")])
+--------------------------------------------------------------------------------
+
+(In directory /nfs/nfs1/home/afoltzer/src/monad-par/examples)
+Next run who, reporting users other than the current user.  This may help with detectivework.
+Who_Output: sasasidh
+Executing ./ntimes_minmedmax 5 ./blackscholes_NUMA_threaded.exe 10000 30000000 +RTS  -s  -qa -A1M -N1 -RTS
+    Execution log file: 
+       ./runs/2012.03.08_blackscholes_NUMA_threaded.exe__1331242852_1.log
+    
+    Running trial 1 of 5:
+    ------------------------------------------------------------
+    Running blackscholes, numOptions 30000000 and block size 10000
+    Final checksum: -2617.7463
+       6,127,683,568 bytes allocated in the heap
+           6,276,728 bytes copied during GC
+          66,206,808 bytes maximum residency (8 sample(s))
+           2,920,024 bytes maximum slop
+                 127 MB total memory in use (5 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0      5782 colls,     0 par    0.20s    0.22s     0.0000s    0.0005s
+      Gen  1         8 colls,     0 par    0.01s    0.01s     0.0009s    0.0017s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   29.87s    ( 30.01s)       0.00s    (  0.00s)
+      Task  1 (worker) :   29.68s    ( 29.78s)       0.21s    (  0.23s)
+      Task  2 (worker) :   29.88s    ( 30.01s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   29.88s    ( 30.01s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   29.68s  ( 29.78s elapsed)
+      GC      time    0.21s  (  0.23s elapsed)
+      EXIT    time   -0.01s  (  0.00s elapsed)
+      Total   time   29.87s  ( 30.01s elapsed)
+    
+      Alloc rate    206,566,357 bytes per MUT second
+    
+      Productivity  99.3% of total user, 98.8% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    30.02 real
+       Run 1 of command succeeded
+    
+    Running trial 2 of 5:
+    ------------------------------------------------------------
+    Running blackscholes, numOptions 30000000 and block size 10000
+    Final checksum: -2617.7463
+       6,127,683,568 bytes allocated in the heap
+           6,276,728 bytes copied during GC
+          66,206,808 bytes maximum residency (8 sample(s))
+           2,920,024 bytes maximum slop
+                 127 MB total memory in use (5 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0      5782 colls,     0 par    0.20s    0.22s     0.0000s    0.0005s
+      Gen  1         8 colls,     0 par    0.01s    0.01s     0.0009s    0.0017s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   29.87s    ( 30.00s)       0.00s    (  0.00s)
+      Task  1 (worker) :   29.68s    ( 29.77s)       0.20s    (  0.23s)
+      Task  2 (worker) :   29.88s    ( 30.00s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   29.88s    ( 30.00s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   29.68s  ( 29.77s elapsed)
+      GC      time    0.20s  (  0.23s elapsed)
+      EXIT    time   -0.01s  (  0.00s elapsed)
+      Total   time   29.87s  ( 30.00s elapsed)
+    
+      Alloc rate    206,552,333 bytes per MUT second
+    
+      Productivity  99.3% of total user, 98.9% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    30.02 real
+       Run 2 of command succeeded
+    
+    Running trial 3 of 5:
+    ------------------------------------------------------------
+    Running blackscholes, numOptions 30000000 and block size 10000
+    Final checksum: -2617.7463
+       6,127,683,568 bytes allocated in the heap
+           6,276,728 bytes copied during GC
+          66,206,808 bytes maximum residency (8 sample(s))
+           2,920,024 bytes maximum slop
+                 127 MB total memory in use (5 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0      5782 colls,     0 par    0.21s    0.22s     0.0000s    0.0005s
+      Gen  1         8 colls,     0 par    0.00s    0.01s     0.0009s    0.0017s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   29.86s    ( 30.01s)       0.00s    (  0.00s)
+      Task  1 (worker) :   29.67s    ( 29.78s)       0.21s    (  0.23s)
+      Task  2 (worker) :   29.88s    ( 30.01s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   29.88s    ( 30.01s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   29.66s  ( 29.78s elapsed)
+      GC      time    0.21s  (  0.23s elapsed)
+      EXIT    time   -0.01s  (  0.00s elapsed)
+      Total   time   29.87s  ( 30.01s elapsed)
+    
+      Alloc rate    206,629,032 bytes per MUT second
+    
+      Productivity  99.3% of total user, 98.8% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    30.02 real
+       Run 3 of command succeeded
+    
+    Running trial 4 of 5:
+    ------------------------------------------------------------
+    Running blackscholes, numOptions 30000000 and block size 10000
+    Final checksum: -2617.7463
+       6,127,683,568 bytes allocated in the heap
+           6,276,728 bytes copied during GC
+          66,206,808 bytes maximum residency (8 sample(s))
+           2,920,024 bytes maximum slop
+                 127 MB total memory in use (5 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0      5782 colls,     0 par    0.22s    0.22s     0.0000s    0.0003s
+      Gen  1         8 colls,     0 par    0.01s    0.01s     0.0009s    0.0017s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   29.88s    ( 30.00s)       0.00s    (  0.00s)
+      Task  1 (worker) :   29.66s    ( 29.77s)       0.23s    (  0.23s)
+      Task  2 (worker) :   29.89s    ( 30.00s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   29.89s    ( 30.00s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   29.66s  ( 29.77s elapsed)
+      GC      time    0.23s  (  0.23s elapsed)
+      EXIT    time   -0.01s  (  0.00s elapsed)
+      Total   time   29.88s  ( 30.00s elapsed)
+    
+      Alloc rate    206,663,856 bytes per MUT second
+    
+      Productivity  99.2% of total user, 98.8% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    30.02 real
+       Run 4 of command succeeded
+    
+    Running trial 5 of 5:
+    ------------------------------------------------------------
+    Running blackscholes, numOptions 30000000 and block size 10000
+    Final checksum: -2617.7463
+       6,127,683,568 bytes allocated in the heap
+           6,276,728 bytes copied during GC
+          66,206,808 bytes maximum residency (8 sample(s))
+           2,920,024 bytes maximum slop
+                 127 MB total memory in use (5 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0      5782 colls,     0 par    0.20s    0.22s     0.0000s    0.0003s
+      Gen  1         8 colls,     0 par    0.00s    0.01s     0.0009s    0.0017s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   29.87s    ( 30.01s)       0.00s    (  0.00s)
+      Task  1 (worker) :   29.68s    ( 29.78s)       0.20s    (  0.23s)
+      Task  2 (worker) :   29.88s    ( 30.01s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   29.88s    ( 30.01s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   29.68s  ( 29.78s elapsed)
+      GC      time    0.20s  (  0.23s elapsed)
+      EXIT    time   -0.01s  (  0.00s elapsed)
+      Total   time   29.87s  ( 30.01s elapsed)
+    
+      Alloc rate    206,538,479 bytes per MUT second
+    
+      Productivity  99.3% of total user, 98.9% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    30.02 real
+       Run 5 of command succeeded
+    Final Timings/Productivities: 
+    Median time (of 5): 
+ >>> MIN/MEDIAN/MAX (TIME,PROD)  30.02 30.02 30.02   99.233 99.233 99.233
+
+--------------------------------------------------------------------------------
+  Running Config 2 of 7: nbody (args "25000") scheduler NUMA  threads 1 (Env=[("NUMA_TOPOLOGY","[[0]]")])
+--------------------------------------------------------------------------------
+
+(In directory /nfs/nfs1/home/afoltzer/src/monad-par/examples)
+Next run who, reporting users other than the current user.  This may help with detectivework.
+Who_Output: sasasidh
+Executing ./ntimes_minmedmax 5 ./nbody_NUMA_threaded.exe 25000 +RTS  -s  -qa -A1M -N1 -RTS
+    Execution log file: 
+       ./runs/2012.03.08_nbody_NUMA_threaded.exe__1331243026_1.log
+    
+    Running trial 1 of 5:
+    ------------------------------------------------------------
+    12502
+          42,885,600 bytes allocated in the heap
+          27,558,912 bytes copied during GC
+           5,258,880 bytes maximum residency (4 sample(s))
+             207,048 bytes maximum slop
+                  14 MB total memory in use (0 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0        38 colls,     0 par    0.02s    0.03s     0.0007s    0.0025s
+      Gen  1         4 colls,     0 par    0.01s    0.02s     0.0046s    0.0074s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   19.40s    ( 19.42s)       0.00s    (  0.00s)
+      Task  1 (worker) :   19.37s    ( 19.37s)       0.03s    (  0.04s)
+      Task  2 (worker) :   19.41s    ( 19.42s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   19.41s    ( 19.42s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   19.37s  ( 19.37s elapsed)
+      GC      time    0.03s  (  0.04s elapsed)
+      EXIT    time   -0.01s  (  0.00s elapsed)
+      Total   time   19.40s  ( 19.42s elapsed)
+    
+      Alloc rate    2,214,587 bytes per MUT second
+    
+      Productivity  99.8% of total user, 99.7% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    19.42 real
+       Run 1 of command succeeded
+    
+    Running trial 2 of 5:
+    ------------------------------------------------------------
+    12502
+          42,885,600 bytes allocated in the heap
+          27,558,912 bytes copied during GC
+           5,258,880 bytes maximum residency (4 sample(s))
+             207,048 bytes maximum slop
+                  14 MB total memory in use (0 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0        38 colls,     0 par    0.02s    0.03s     0.0007s    0.0024s
+      Gen  1         4 colls,     0 par    0.01s    0.02s     0.0042s    0.0070s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   19.39s    ( 19.40s)       0.00s    (  0.00s)
+      Task  1 (worker) :   19.36s    ( 19.36s)       0.04s    (  0.04s)
+      Task  2 (worker) :   19.39s    ( 19.41s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   19.40s    ( 19.41s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   19.36s  ( 19.36s elapsed)
+      GC      time    0.04s  (  0.04s elapsed)
+      EXIT    time   -0.01s  (  0.00s elapsed)
+      Total   time   19.39s  ( 19.41s elapsed)
+    
+      Alloc rate    2,215,959 bytes per MUT second
+    
+      Productivity  99.8% of total user, 99.7% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    19.41 real
+       Run 2 of command succeeded
+    
+    Running trial 3 of 5:
+    ------------------------------------------------------------
+    12502
+          42,885,600 bytes allocated in the heap
+          27,558,912 bytes copied during GC
+           5,258,880 bytes maximum residency (4 sample(s))
+             207,048 bytes maximum slop
+                  14 MB total memory in use (0 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0        38 colls,     0 par    0.02s    0.03s     0.0007s    0.0024s
+      Gen  1         4 colls,     0 par    0.01s    0.02s     0.0042s    0.0069s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   19.38s    ( 19.41s)       0.00s    (  0.00s)
+      Task  1 (worker) :   19.36s    ( 19.36s)       0.04s    (  0.04s)
+      Task  2 (worker) :   19.39s    ( 19.41s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   19.39s    ( 19.41s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   19.36s  ( 19.36s elapsed)
+      GC      time    0.04s  (  0.04s elapsed)
+      EXIT    time   -0.01s  (  0.00s elapsed)
+      Total   time   19.39s  ( 19.41s elapsed)
+    
+      Alloc rate    2,216,188 bytes per MUT second
+    
+      Productivity  99.8% of total user, 99.7% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    19.41 real
+       Run 3 of command succeeded
+    
+    Running trial 4 of 5:
+    ------------------------------------------------------------
+    12502
+          42,885,600 bytes allocated in the heap
+          27,558,912 bytes copied during GC
+           5,258,880 bytes maximum residency (4 sample(s))
+             207,048 bytes maximum slop
+                  14 MB total memory in use (0 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0        38 colls,     0 par    0.02s    0.03s     0.0007s    0.0024s
+      Gen  1         4 colls,     0 par    0.01s    0.02s     0.0042s    0.0069s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   19.39s    ( 19.41s)       0.00s    (  0.00s)
+      Task  1 (worker) :   19.36s    ( 19.37s)       0.04s    (  0.04s)
+      Task  2 (worker) :   19.39s    ( 19.41s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   19.40s    ( 19.41s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   19.36s  ( 19.37s elapsed)
+      GC      time    0.04s  (  0.04s elapsed)
+      EXIT    time   -0.01s  (  0.00s elapsed)
+      Total   time   19.40s  ( 19.41s elapsed)
+    
+      Alloc rate    2,215,616 bytes per MUT second
+    
+      Productivity  99.8% of total user, 99.7% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    19.42 real
+       Run 4 of command succeeded
+    
+    Running trial 5 of 5:
+    ------------------------------------------------------------
+    12502
+          42,885,600 bytes allocated in the heap
+          27,558,912 bytes copied during GC
+           5,258,880 bytes maximum residency (4 sample(s))
+             207,048 bytes maximum slop
+                  14 MB total memory in use (0 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0        38 colls,     0 par    0.02s    0.03s     0.0007s    0.0024s
+      Gen  1         4 colls,     0 par    0.01s    0.02s     0.0042s    0.0069s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   19.39s    ( 19.41s)       0.00s    (  0.00s)
+      Task  1 (worker) :   19.36s    ( 19.36s)       0.03s    (  0.04s)
+      Task  2 (worker) :   19.40s    ( 19.41s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   19.40s    ( 19.41s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   19.36s  ( 19.36s elapsed)
+      GC      time    0.03s  (  0.04s elapsed)
+      EXIT    time   -0.01s  (  0.00s elapsed)
+      Total   time   19.39s  ( 19.41s elapsed)
+    
+      Alloc rate    2,215,730 bytes per MUT second
+    
+      Productivity  99.8% of total user, 99.7% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    19.41 real
+       Run 5 of command succeeded
+    Final Timings/Productivities: 
+    Median time (of 5): 
+ >>> MIN/MEDIAN/MAX (TIME,PROD)  19.41 19.41 19.42   99.793 99.793 99.793
+
+--------------------------------------------------------------------------------
+  Running Config 3 of 7: mandel (args "1024 1024 512") scheduler NUMA  threads 1 (Env=[("NUMA_TOPOLOGY","[[0]]")])
+--------------------------------------------------------------------------------
+
+(In directory /nfs/nfs1/home/afoltzer/src/monad-par/examples)
+Next run who, reporting users other than the current user.  This may help with detectivework.
+Who_Output: sasasidh
+Executing ./ntimes_minmedmax 5 ./mandel_NUMA_threaded.exe 1024 1024 512 +RTS  -s  -qa -A1M -N1 -RTS
+    Execution log file: 
+       ./runs/2012.03.08_mandel_NUMA_threaded.exe__1331243146_1.log
+    
+    Running trial 1 of 5:
+    ------------------------------------------------------------
+    About to poke pixels to launch runPar:
+    Should be done with runpar at this point.
+    Spot check, length of leftmost leaf: 0
+      13,192,705,480 bytes allocated in the heap
+           2,124,664 bytes copied during GC
+           5,353,088 bytes maximum residency (5 sample(s))
+           4,203,392 bytes maximum slop
+                  14 MB total memory in use (0 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0     12573 colls,     0 par    0.20s    0.23s     0.0000s    0.0002s
+      Gen  1         5 colls,     0 par    0.00s    0.00s     0.0003s    0.0006s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   14.48s    ( 14.57s)       0.00s    (  0.00s)
+      Task  1 (worker) :   14.29s    ( 14.34s)       0.20s    (  0.23s)
+      Task  2 (worker) :   14.49s    ( 14.57s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   14.49s    ( 14.57s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   14.29s  ( 14.35s elapsed)
+      GC      time    0.20s  (  0.23s elapsed)
+      EXIT    time   -0.01s  (  0.00s elapsed)
+      Total   time   14.49s  ( 14.57s elapsed)
+    
+      Alloc rate    923,740,936 bytes per MUT second
+    
+      Productivity  98.6% of total user, 98.0% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    14.58 real
+       Run 1 of command succeeded
+    
+    Running trial 2 of 5:
+    ------------------------------------------------------------
+    About to poke pixels to launch runPar:
+    Should be done with runpar at this point.
+    Spot check, length of leftmost leaf: 0
+      13,192,705,480 bytes allocated in the heap
+           2,124,664 bytes copied during GC
+           5,353,088 bytes maximum residency (5 sample(s))
+           4,203,392 bytes maximum slop
+                  14 MB total memory in use (0 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0     12573 colls,     0 par    0.18s    0.22s     0.0000s    0.0002s
+      Gen  1         5 colls,     0 par    0.00s    0.00s     0.0002s    0.0005s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   14.50s    ( 14.58s)       0.00s    (  0.00s)
+      Task  1 (worker) :   14.31s    ( 14.35s)       0.18s    (  0.22s)
+      Task  2 (worker) :   14.50s    ( 14.58s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   14.50s    ( 14.58s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   14.32s  ( 14.35s elapsed)
+      GC      time    0.18s  (  0.22s elapsed)
+      EXIT    time    0.00s  (  0.00s elapsed)
+      Total   time   14.50s  ( 14.58s elapsed)
+    
+      Alloc rate    921,289,831 bytes per MUT second
+    
+      Productivity  98.8% of total user, 98.2% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    14.58 real
+       Run 2 of command succeeded
+    
+    Running trial 3 of 5:
+    ------------------------------------------------------------
+    About to poke pixels to launch runPar:
+    Should be done with runpar at this point.
+    Spot check, length of leftmost leaf: 0
+      13,192,705,480 bytes allocated in the heap
+           2,124,664 bytes copied during GC
+           5,353,088 bytes maximum residency (5 sample(s))
+           4,203,392 bytes maximum slop
+                  14 MB total memory in use (0 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0     12573 colls,     0 par    0.21s    0.22s     0.0000s    0.0002s
+      Gen  1         5 colls,     0 par    0.00s    0.00s     0.0002s    0.0005s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   14.50s    ( 14.57s)       0.00s    (  0.00s)
+      Task  1 (worker) :   14.29s    ( 14.35s)       0.21s    (  0.23s)
+      Task  2 (worker) :   14.50s    ( 14.58s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   14.50s    ( 14.58s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   14.29s  ( 14.35s elapsed)
+      GC      time    0.21s  (  0.23s elapsed)
+      EXIT    time    0.00s  (  0.00s elapsed)
+      Total   time   14.50s  ( 14.58s elapsed)
+    
+      Alloc rate    923,094,400 bytes per MUT second
+    
+      Productivity  98.5% of total user, 98.0% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    14.58 real
+       Run 3 of command succeeded
+    
+    Running trial 4 of 5:
+    ------------------------------------------------------------
+    About to poke pixels to launch runPar:
+    Should be done with runpar at this point.
+    Spot check, length of leftmost leaf: 0
+      13,192,705,480 bytes allocated in the heap
+           2,124,664 bytes copied during GC
+           5,353,088 bytes maximum residency (5 sample(s))
+           4,203,392 bytes maximum slop
+                  14 MB total memory in use (0 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0     12573 colls,     0 par    0.18s    0.22s     0.0000s    0.0002s
+      Gen  1         5 colls,     0 par    0.00s    0.00s     0.0002s    0.0005s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   14.48s    ( 14.56s)       0.00s    (  0.00s)
+      Task  1 (worker) :   14.31s    ( 14.34s)       0.18s    (  0.22s)
+      Task  2 (worker) :   14.49s    ( 14.56s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   14.49s    ( 14.56s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   14.31s  ( 14.34s elapsed)
+      GC      time    0.18s  (  0.22s elapsed)
+      EXIT    time   -0.01s  (  0.00s elapsed)
+      Total   time   14.48s  ( 14.56s elapsed)
+    
+      Alloc rate    922,384,661 bytes per MUT second
+    
+      Productivity  98.7% of total user, 98.2% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    14.57 real
+       Run 4 of command succeeded
+    
+    Running trial 5 of 5:
+    ------------------------------------------------------------
+    About to poke pixels to launch runPar:
+    Should be done with runpar at this point.
+    Spot check, length of leftmost leaf: 0
+      13,192,705,480 bytes allocated in the heap
+           2,124,664 bytes copied during GC
+           5,353,088 bytes maximum residency (5 sample(s))
+           4,203,392 bytes maximum slop
+                  14 MB total memory in use (0 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0     12573 colls,     0 par    0.21s    0.22s     0.0000s    0.0002s
+      Gen  1         5 colls,     0 par    0.00s    0.00s     0.0002s    0.0005s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   14.48s    ( 14.56s)       0.00s    (  0.00s)
+      Task  1 (worker) :   14.27s    ( 14.34s)       0.21s    (  0.22s)
+      Task  2 (worker) :   14.48s    ( 14.57s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   14.49s    ( 14.57s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   14.28s  ( 14.34s elapsed)
+      GC      time    0.21s  (  0.22s elapsed)
+      EXIT    time   -0.01s  (  0.00s elapsed)
+      Total   time   14.48s  ( 14.57s elapsed)
+    
+      Alloc rate    924,193,332 bytes per MUT second
+    
+      Productivity  98.6% of total user, 98.0% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    14.57 real
+       Run 5 of command succeeded
+    Final Timings/Productivities: 
+    Median time (of 5): 
+ >>> MIN/MEDIAN/MAX (TIME,PROD)  14.57 14.58 14.58   98.489 98.422 98.490
+
+--------------------------------------------------------------------------------
+  Running Config 4 of 7: coins (args "8 1600") scheduler NUMA  threads 1 (Env=[("NUMA_TOPOLOGY","[[0]]")])
+--------------------------------------------------------------------------------
+
+(In directory /nfs/nfs1/home/afoltzer/src/monad-par/examples)
+Next run who, reporting users other than the current user.  This may help with detectivework.
+Who_Output: sasasidh
+Executing ./ntimes_minmedmax 5 ./coins_NUMA_threaded.exe 8 1600 +RTS  -s  -qa -A1M -N1 -RTS
+    Execution log file: 
+       ./runs/2012.03.08_coins_NUMA_threaded.exe__1331243250_1.log
+    
+    Running trial 1 of 5:
+    ------------------------------------------------------------
+    1632068
+      62,249,065,352 bytes allocated in the heap
+          41,172,352 bytes copied during GC
+             170,616 bytes maximum residency (24 sample(s))
+              53,088 bytes maximum slop
+                   3 MB total memory in use (0 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0     59773 colls,     0 par    0.62s    0.73s     0.0000s    0.0002s
+      Gen  1        24 colls,     0 par    0.00s    0.00s     0.0001s    0.0006s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   14.96s    ( 15.25s)       0.00s    (  0.00s)
+      Task  1 (worker) :   14.35s    ( 14.51s)       0.62s    (  0.74s)
+      Task  2 (worker) :   14.97s    ( 15.26s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   14.97s    ( 15.26s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   14.35s  ( 14.52s elapsed)
+      GC      time    0.62s  (  0.74s elapsed)
+      EXIT    time   -0.01s  (  0.00s elapsed)
+      Total   time   14.96s  ( 15.26s elapsed)
+    
+      Alloc rate    4,339,176,707 bytes per MUT second
+    
+      Productivity  95.9% of total user, 94.0% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    15.26 real
+       Run 1 of command succeeded
+    
+    Running trial 2 of 5:
+    ------------------------------------------------------------
+    1632068
+      62,249,065,352 bytes allocated in the heap
+          41,172,352 bytes copied during GC
+             170,616 bytes maximum residency (24 sample(s))
+              53,088 bytes maximum slop
+                   3 MB total memory in use (0 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0     59773 colls,     0 par    0.60s    0.74s     0.0000s    0.0002s
+      Gen  1        24 colls,     0 par    0.00s    0.00s     0.0001s    0.0004s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   15.03s    ( 15.32s)       0.00s    (  0.00s)
+      Task  1 (worker) :   14.44s    ( 14.58s)       0.59s    (  0.74s)
+      Task  2 (worker) :   15.03s    ( 15.32s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   15.03s    ( 15.32s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   14.43s  ( 14.58s elapsed)
+      GC      time    0.60s  (  0.74s elapsed)
+      EXIT    time    0.00s  (  0.00s elapsed)
+      Total   time   15.03s  ( 15.33s elapsed)
+    
+      Alloc rate    4,313,320,520 bytes per MUT second
+    
+      Productivity  96.0% of total user, 94.2% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    15.33 real
+       Run 2 of command succeeded
+    
+    Running trial 3 of 5:
+    ------------------------------------------------------------
+    1632068
+      62,249,065,352 bytes allocated in the heap
+          41,172,352 bytes copied during GC
+             170,616 bytes maximum residency (24 sample(s))
+              53,088 bytes maximum slop
+                   3 MB total memory in use (0 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0     59773 colls,     0 par    0.57s    0.73s     0.0000s    0.0002s
+      Gen  1        24 colls,     0 par    0.00s    0.00s     0.0001s    0.0004s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   14.89s    ( 15.20s)       0.00s    (  0.00s)
+      Task  1 (worker) :   14.33s    ( 14.46s)       0.56s    (  0.73s)
+      Task  2 (worker) :   14.89s    ( 15.20s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   14.89s    ( 15.20s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   14.32s  ( 14.46s elapsed)
+      GC      time    0.57s  (  0.73s elapsed)
+      EXIT    time   -0.01s  (  0.00s elapsed)
+      Total   time   14.89s  ( 15.20s elapsed)
+    
+      Alloc rate    4,348,269,205 bytes per MUT second
+    
+      Productivity  96.1% of total user, 94.2% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    15.20 real
+       Run 3 of command succeeded
+    
+    Running trial 4 of 5:
+    ------------------------------------------------------------
+    1632068
+      62,249,065,352 bytes allocated in the heap
+          41,172,352 bytes copied during GC
+             170,616 bytes maximum residency (24 sample(s))
+              53,088 bytes maximum slop
+                   3 MB total memory in use (0 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0     59773 colls,     0 par    0.58s    0.74s     0.0000s    0.0002s
+      Gen  1        24 colls,     0 par    0.00s    0.00s     0.0001s    0.0004s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   14.82s    ( 15.15s)       0.00s    (  0.00s)
+      Task  1 (worker) :   14.26s    ( 14.41s)       0.57s    (  0.74s)
+      Task  2 (worker) :   14.83s    ( 15.16s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   14.83s    ( 15.16s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   14.25s  ( 14.41s elapsed)
+      GC      time    0.58s  (  0.74s elapsed)
+      EXIT    time   -0.01s  (  0.00s elapsed)
+      Total   time   14.83s  ( 15.16s elapsed)
+    
+      Alloc rate    4,370,250,772 bytes per MUT second
+    
+      Productivity  96.1% of total user, 94.0% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    15.16 real
+       Run 4 of command succeeded
+    
+    Running trial 5 of 5:
+    ------------------------------------------------------------
+    1632068
+      62,249,065,352 bytes allocated in the heap
+          41,172,352 bytes copied during GC
+             170,616 bytes maximum residency (24 sample(s))
+              53,088 bytes maximum slop
+                   3 MB total memory in use (0 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0     59773 colls,     0 par    0.56s    0.73s     0.0000s    0.0002s
+      Gen  1        24 colls,     0 par    0.00s    0.00s     0.0001s    0.0004s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   14.88s    ( 15.14s)       0.00s    (  0.00s)
+      Task  1 (worker) :   14.32s    ( 14.41s)       0.56s    (  0.73s)
+      Task  2 (worker) :   14.88s    ( 15.15s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   14.88s    ( 15.15s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   14.32s  ( 14.41s elapsed)
+      GC      time    0.56s  (  0.73s elapsed)
+      EXIT    time   -0.01s  (  0.00s elapsed)
+      Total   time   14.88s  ( 15.15s elapsed)
+    
+      Alloc rate    4,349,181,220 bytes per MUT second
+    
+      Productivity  96.2% of total user, 94.5% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    15.15 real
+       Run 5 of command succeeded
+    Final Timings/Productivities: 
+    Median time (of 5): 
+ >>> MIN/MEDIAN/MAX (TIME,PROD)  15.15 15.20 15.33   95.178 95.194 95.169
+
+--------------------------------------------------------------------------------
+  Running Config 5 of 7: matmult/MatMult (args "1024 0 64") scheduler NUMA  threads 1 (Env=[("NUMA_TOPOLOGY","[[0]]")])
+--------------------------------------------------------------------------------
+
+(In directory /nfs/nfs1/home/afoltzer/src/monad-par/examples)
+Next run who, reporting users other than the current user.  This may help with detectivework.
+Who_Output: sasasidh
+Executing ./ntimes_minmedmax 5 ./matmult/MatMult_NUMA_threaded.exe 1024 0 64 +RTS  -s  -qa -A1M -N1 -RTS
+    Execution log file: 
+       ./runs/2012.03.08_MatMult_NUMA_threaded.exe__1331243359_1.log
+    
+    Running trial 1 of 5:
+    ------------------------------------------------------------
+    [[Nothing]]
+         213,536,384 bytes allocated in the heap
+         182,605,864 bytes copied during GC
+          47,597,008 bytes maximum residency (7 sample(s))
+           3,713,520 bytes maximum slop
+                  98 MB total memory in use (0 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0       199 colls,     0 par    0.18s    0.18s     0.0009s    0.0017s
+      Gen  1         7 colls,     0 par    0.14s    0.19s     0.0278s    0.0991s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   40.62s    ( 40.71s)       0.00s    (  0.00s)
+      Task  1 (worker) :   40.32s    ( 40.34s)       0.32s    (  0.37s)
+      Task  2 (worker) :   40.64s    ( 40.71s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   40.64s    ( 40.71s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   40.32s  ( 40.34s elapsed)
+      GC      time    0.32s  (  0.37s elapsed)
+      EXIT    time   -0.02s  (  0.00s elapsed)
+      Total   time   40.62s  ( 40.71s elapsed)
+    
+      Alloc rate    5,298,291 bytes per MUT second
+    
+      Productivity  99.2% of total user, 99.0% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    40.72 real
+       Run 1 of command succeeded
+    
+    Running trial 2 of 5:
+    ------------------------------------------------------------
+    [[Nothing]]
+         213,536,384 bytes allocated in the heap
+         182,605,864 bytes copied during GC
+          47,597,008 bytes maximum residency (7 sample(s))
+           3,713,520 bytes maximum slop
+                  98 MB total memory in use (0 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0       199 colls,     0 par    0.16s    0.17s     0.0009s    0.0016s
+      Gen  1         7 colls,     0 par    0.15s    0.19s     0.0276s    0.0990s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   40.83s    ( 40.92s)       0.00s    (  0.00s)
+      Task  1 (worker) :   40.54s    ( 40.55s)       0.30s    (  0.37s)
+      Task  2 (worker) :   40.85s    ( 40.92s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   40.85s    ( 40.92s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   40.54s  ( 40.55s elapsed)
+      GC      time    0.30s  (  0.37s elapsed)
+      EXIT    time   -0.02s  (  0.00s elapsed)
+      Total   time   40.83s  ( 40.92s elapsed)
+    
+      Alloc rate    5,268,880 bytes per MUT second
+    
+      Productivity  99.3% of total user, 99.0% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    40.93 real
+       Run 2 of command succeeded
+    
+    Running trial 3 of 5:
+    ------------------------------------------------------------
+    [[Nothing]]
+         213,536,384 bytes allocated in the heap
+         182,605,864 bytes copied during GC
+          47,597,008 bytes maximum residency (7 sample(s))
+           3,713,520 bytes maximum slop
+                  98 MB total memory in use (0 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0       199 colls,     0 par    0.18s    0.18s     0.0009s    0.0017s
+      Gen  1         7 colls,     0 par    0.15s    0.19s     0.0275s    0.0993s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   40.50s    ( 40.58s)       0.00s    (  0.00s)
+      Task  1 (worker) :   40.19s    ( 40.21s)       0.33s    (  0.37s)
+      Task  2 (worker) :   40.52s    ( 40.58s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   40.52s    ( 40.58s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   40.19s  ( 40.21s elapsed)
+      GC      time    0.33s  (  0.37s elapsed)
+      EXIT    time   -0.02s  (  0.00s elapsed)
+      Total   time   40.50s  ( 40.58s elapsed)
+    
+      Alloc rate    5,315,036 bytes per MUT second
+    
+      Productivity  99.2% of total user, 99.0% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    40.59 real
+       Run 3 of command succeeded
+    
+    Running trial 4 of 5:
+    ------------------------------------------------------------
+    [[Nothing]]
+         213,536,384 bytes allocated in the heap
+         182,605,864 bytes copied during GC
+          47,597,008 bytes maximum residency (7 sample(s))
+           3,713,520 bytes maximum slop
+                  98 MB total memory in use (0 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0       199 colls,     0 par    0.17s    0.17s     0.0009s    0.0016s
+      Gen  1         7 colls,     0 par    0.15s    0.19s     0.0278s    0.0993s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   40.68s    ( 40.75s)       0.00s    (  0.00s)
+      Task  1 (worker) :   40.37s    ( 40.39s)       0.32s    (  0.37s)
+      Task  2 (worker) :   40.70s    ( 40.76s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   40.70s    ( 40.76s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   40.37s  ( 40.39s elapsed)
+      GC      time    0.32s  (  0.37s elapsed)
+      EXIT    time   -0.02s  (  0.00s elapsed)
+      Total   time   40.68s  ( 40.76s elapsed)
+    
+      Alloc rate    5,291,728 bytes per MUT second
+    
+      Productivity  99.2% of total user, 99.0% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    40.77 real
+       Run 4 of command succeeded
+    
+    Running trial 5 of 5:
+    ------------------------------------------------------------
+    [[Nothing]]
+         213,536,384 bytes allocated in the heap
+         182,605,864 bytes copied during GC
+          47,597,008 bytes maximum residency (7 sample(s))
+           3,713,520 bytes maximum slop
+                  98 MB total memory in use (0 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0       199 colls,     0 par    0.18s    0.18s     0.0009s    0.0016s
+      Gen  1         7 colls,     0 par    0.15s    0.20s     0.0279s    0.1002s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   39.77s    ( 39.84s)       0.00s    (  0.00s)
+      Task  1 (worker) :   39.44s    ( 39.47s)       0.33s    (  0.37s)
+      Task  2 (worker) :   39.77s    ( 39.84s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   39.77s    ( 39.84s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   39.44s  ( 39.47s elapsed)
+      GC      time    0.33s  (  0.37s elapsed)
+      EXIT    time    0.00s  (  0.00s elapsed)
+      Total   time   39.77s  ( 39.84s elapsed)
+    
+      Alloc rate    5,414,207 bytes per MUT second
+    
+      Productivity  99.2% of total user, 99.0% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    39.85 real
+       Run 5 of command succeeded
+    Final Timings/Productivities: 
+    Median time (of 5): 
+ >>> MIN/MEDIAN/MAX (TIME,PROD)  39.85 40.72 40.93   99.071 99.091 99.095
+
+--------------------------------------------------------------------------------
+  Running Config 6 of 7: sumeuler/sumeuler (args "38 16000 100") scheduler NUMA  threads 1 (Env=[("NUMA_TOPOLOGY","[[0]]")])
+--------------------------------------------------------------------------------
+
+(In directory /nfs/nfs1/home/afoltzer/src/monad-par/examples)
+Next run who, reporting users other than the current user.  This may help with detectivework.
+Who_Output: sasasidh
+Executing ./ntimes_minmedmax 5 ./sumeuler/sumeuler_NUMA_threaded.exe 38 16000 100 +RTS  -s  -qa -A1M -N1 -RTS
+    Execution log file: 
+       ./runs/2012.03.08_sumeuler_NUMA_threaded.exe__1331243593_1.log
+    
+    Running trial 1 of 5:
+    ------------------------------------------------------------
+    sumEuler [0..16000] = 77816347
+       8,292,437,536 bytes allocated in the heap
+           7,743,000 bytes copied during GC
+             766,688 bytes maximum residency (4 sample(s))
+              78,312 bytes maximum slop
+                   4 MB total memory in use (0 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0      7981 colls,     0 par    0.08s    0.09s     0.0000s    0.0004s
+      Gen  1         4 colls,     0 par    0.00s    0.00s     0.0009s    0.0012s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   20.74s    ( 20.80s)       0.00s    (  0.00s)
+      Task  1 (worker) :   20.67s    ( 20.71s)       0.08s    (  0.09s)
+      Task  2 (worker) :   20.75s    ( 20.81s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   20.75s    ( 20.81s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   20.67s  ( 20.71s elapsed)
+      GC      time    0.08s  (  0.09s elapsed)
+      EXIT    time   -0.01s  (  0.00s elapsed)
+      Total   time   20.74s  ( 20.81s elapsed)
+    
+      Alloc rate    401,437,388 bytes per MUT second
+    
+      Productivity  99.6% of total user, 99.3% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    20.81 real
+       Run 1 of command succeeded
+    
+    Running trial 2 of 5:
+    ------------------------------------------------------------
+    sumEuler [0..16000] = 77816347
+       8,292,437,536 bytes allocated in the heap
+           7,743,000 bytes copied during GC
+             766,688 bytes maximum residency (4 sample(s))
+              78,312 bytes maximum slop
+                   4 MB total memory in use (0 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0      7981 colls,     0 par    0.09s    0.09s     0.0000s    0.0005s
+      Gen  1         4 colls,     0 par    0.00s    0.00s     0.0008s    0.0012s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   20.74s    ( 20.80s)       0.00s    (  0.00s)
+      Task  1 (worker) :   20.66s    ( 20.70s)       0.09s    (  0.09s)
+      Task  2 (worker) :   20.75s    ( 20.80s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   20.75s    ( 20.80s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   20.66s  ( 20.70s elapsed)
+      GC      time    0.09s  (  0.09s elapsed)
+      EXIT    time   -0.01s  (  0.00s elapsed)
+      Total   time   20.74s  ( 20.80s elapsed)
+    
+      Alloc rate    401,593,111 bytes per MUT second
+    
+      Productivity  99.6% of total user, 99.3% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    20.80 real
+       Run 2 of command succeeded
+    
+    Running trial 3 of 5:
+    ------------------------------------------------------------
+    sumEuler [0..16000] = 77816347
+       8,292,437,536 bytes allocated in the heap
+           7,743,000 bytes copied during GC
+             766,688 bytes maximum residency (4 sample(s))
+              78,312 bytes maximum slop
+                   4 MB total memory in use (0 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0      7981 colls,     0 par    0.07s    0.09s     0.0000s    0.0004s
+      Gen  1         4 colls,     0 par    0.00s    0.00s     0.0008s    0.0012s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   20.79s    ( 20.80s)       0.00s    (  0.00s)
+      Task  1 (worker) :   20.74s    ( 20.70s)       0.07s    (  0.09s)
+      Task  2 (worker) :   20.79s    ( 20.80s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   20.81s    ( 20.80s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   20.73s  ( 20.70s elapsed)
+      GC      time    0.07s  (  0.09s elapsed)
+      EXIT    time   -0.01s  (  0.00s elapsed)
+      Total   time   20.80s  ( 20.80s elapsed)
+    
+      Alloc rate    400,101,184 bytes per MUT second
+    
+      Productivity  99.6% of total user, 99.6% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    20.80 real
+       Run 3 of command succeeded
+    
+    Running trial 4 of 5:
+    ------------------------------------------------------------
+    sumEuler [0..16000] = 77816347
+       8,292,437,536 bytes allocated in the heap
+           7,743,000 bytes copied during GC
+             766,688 bytes maximum residency (4 sample(s))
+              78,312 bytes maximum slop
+                   4 MB total memory in use (0 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0      7981 colls,     0 par    0.08s    0.09s     0.0000s    0.0004s
+      Gen  1         4 colls,     0 par    0.00s    0.00s     0.0008s    0.0010s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   20.75s    ( 20.80s)       0.00s    (  0.00s)
+      Task  1 (worker) :   20.67s    ( 20.71s)       0.08s    (  0.09s)
+      Task  2 (worker) :   20.76s    ( 20.80s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   20.76s    ( 20.80s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   20.67s  ( 20.71s elapsed)
+      GC      time    0.09s  (  0.09s elapsed)
+      EXIT    time   -0.01s  (  0.00s elapsed)
+      Total   time   20.75s  ( 20.80s elapsed)
+    
+      Alloc rate    401,243,321 bytes per MUT second
+    
+      Productivity  99.6% of total user, 99.3% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    20.81 real
+       Run 4 of command succeeded
+    
+    Running trial 5 of 5:
+    ------------------------------------------------------------
+    sumEuler [0..16000] = 77816347
+       8,292,437,536 bytes allocated in the heap
+           7,743,000 bytes copied during GC
+             766,688 bytes maximum residency (4 sample(s))
+              78,312 bytes maximum slop
+                   4 MB total memory in use (0 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0      7981 colls,     0 par    0.07s    0.09s     0.0000s    0.0005s
+      Gen  1         4 colls,     0 par    0.00s    0.00s     0.0008s    0.0011s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :   20.74s    ( 20.80s)       0.00s    (  0.00s)
+      Task  1 (worker) :   20.68s    ( 20.71s)       0.07s    (  0.09s)
+      Task  2 (worker) :   20.74s    ( 20.80s)       0.00s    (  0.00s)
+      Task  3 (bound)  :   20.75s    ( 20.80s)       0.00s    (  0.00s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time   20.68s  ( 20.71s elapsed)
+      GC      time    0.07s  (  0.09s elapsed)
+      EXIT    time   -0.01s  (  0.00s elapsed)
+      Total   time   20.74s  ( 20.80s elapsed)
+    
+      Alloc rate    401,204,398 bytes per MUT second
+    
+      Productivity  99.6% of total user, 99.4% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    20.80 real
+       Run 5 of command succeeded
+    Final Timings/Productivities: 
+    Median time (of 5): 
+ >>> MIN/MEDIAN/MAX (TIME,PROD)  20.80 20.80 20.81   99.567 99.567 99.567
+
+--------------------------------------------------------------------------------
+  Running Config 7 of 7: sorting/mergesort (args "cpu 24 8192") scheduler NUMA  threads 1 (Env=[("NUMA_TOPOLOGY","[[0]]")])
+--------------------------------------------------------------------------------
+
+(In directory /nfs/nfs1/home/afoltzer/src/monad-par/examples)
+Next run who, reporting users other than the current user.  This may help with detectivework.
+Who_Output: sasasidh
+Executing ./ntimes_minmedmax 5 ./sorting/mergesort_NUMA_threaded.exe cpu 24 8192 +RTS  -s  -qa -A1M -N1 -RTS
+    Execution log file: 
+       ./runs/2012.03.08_mergesort_NUMA_threaded.exe__1331243713_1.log
+    
+    Running trial 1 of 5:
+    ------------------------------------------------------------
+    Merge sorting 16,777,216 elements. First generate a random permutation:
+    Creating vector took 2.362 sec.
+    Executing monad-par based sort...
+    Beginning of sorted list:
+      fromList [0,1,2,3,4,5,6,7]
+    End of sorted list:
+      fromList [16777208,16777209,16777210,16777211,16777212,16777213,16777214,16777215]
+    Sorting vector took 7.283 sec.
+    SELFTIMED 7.282619
+      12,248,907,224 bytes allocated in the heap
+          18,952,544 bytes copied during GC
+         180,897,512 bytes maximum residency (31 sample(s))
+          40,762,008 bytes maximum slop
+                 471 MB total memory in use (15 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0     11493 colls,     0 par    0.22s    0.25s     0.0000s    0.0003s
+      Gen  1        31 colls,     0 par    0.01s    0.03s     0.0009s    0.0121s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :    7.07s    (  7.29s)       0.00s    (  0.00s)
+      Task  1 (worker) :    6.85s    (  7.04s)       0.22s    (  0.25s)
+      Task  2 (worker) :    9.41s    (  9.66s)       0.00s    (  0.00s)
+      Task  3 (bound)  :    9.40s    (  9.64s)       0.01s    (  0.02s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time    9.18s  (  9.37s elapsed)
+      GC      time    0.23s  (  0.28s elapsed)
+      EXIT    time   -0.00s  (  0.01s elapsed)
+      Total   time    9.41s  (  9.66s elapsed)
+    
+      Alloc rate    1,334,943,170 bytes per MUT second
+    
+      Productivity  97.5% of total user, 95.0% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    9.66 real
+       Run 1 of command succeeded
+      +++ Executable appears self-timed!!:
+    SELFTIMED 7.282619
+    
+    Running trial 2 of 5:
+    ------------------------------------------------------------
+    Merge sorting 16,777,216 elements. First generate a random permutation:
+    Creating vector took 2.365 sec.
+    Executing monad-par based sort...
+    Beginning of sorted list:
+      fromList [0,1,2,3,4,5,6,7]
+    End of sorted list:
+      fromList [16777208,16777209,16777210,16777211,16777212,16777213,16777214,16777215]
+    Sorting vector took 7.273 sec.
+    SELFTIMED 7.273425
+      12,248,907,376 bytes allocated in the heap
+          18,952,544 bytes copied during GC
+         180,897,512 bytes maximum residency (31 sample(s))
+          40,762,008 bytes maximum slop
+                 471 MB total memory in use (15 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0     11493 colls,     0 par    0.21s    0.25s     0.0000s    0.0003s
+      Gen  1        31 colls,     0 par    0.01s    0.03s     0.0008s    0.0117s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :    7.03s    (  7.29s)       0.00s    (  0.00s)
+      Task  1 (worker) :    6.81s    (  7.03s)       0.22s    (  0.26s)
+      Task  2 (worker) :    9.37s    (  9.65s)       0.00s    (  0.00s)
+      Task  3 (bound)  :    9.36s    (  9.63s)       0.00s    (  0.02s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time    9.14s  (  9.36s elapsed)
+      GC      time    0.22s  (  0.28s elapsed)
+      EXIT    time   -0.00s  (  0.01s elapsed)
+      Total   time    9.37s  (  9.65s elapsed)
+    
+      Alloc rate    1,339,761,192 bytes per MUT second
+    
+      Productivity  97.6% of total user, 94.7% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    9.65 real
+       Run 2 of command succeeded
+      +++ Executable appears self-timed!!:
+    SELFTIMED 7.273425
+    
+    Running trial 3 of 5:
+    ------------------------------------------------------------
+    Merge sorting 16,777,216 elements. First generate a random permutation:
+    Creating vector took 2.348 sec.
+    Executing monad-par based sort...
+    Beginning of sorted list:
+      fromList [0,1,2,3,4,5,6,7]
+    End of sorted list:
+      fromList [16777208,16777209,16777210,16777211,16777212,16777213,16777214,16777215]
+    Sorting vector took 7.303 sec.
+    SELFTIMED 7.30306
+      12,248,906,080 bytes allocated in the heap
+          18,952,544 bytes copied during GC
+         180,897,512 bytes maximum residency (31 sample(s))
+          40,762,008 bytes maximum slop
+                 470 MB total memory in use (14 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0     11493 colls,     0 par    0.20s    0.25s     0.0000s    0.0003s
+      Gen  1        31 colls,     0 par    0.02s    0.03s     0.0009s    0.0145s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :    7.07s    (  7.32s)       0.00s    (  0.00s)
+      Task  1 (worker) :    6.87s    (  7.06s)       0.21s    (  0.26s)
+      Task  2 (worker) :    9.40s    (  9.67s)       0.00s    (  0.00s)
+      Task  3 (bound)  :    9.39s    (  9.64s)       0.01s    (  0.03s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time    9.17s  (  9.37s elapsed)
+      GC      time    0.22s  (  0.28s elapsed)
+      EXIT    time   -0.00s  (  0.02s elapsed)
+      Total   time    9.40s  (  9.67s elapsed)
+    
+      Alloc rate    1,335,379,216 bytes per MUT second
+    
+      Productivity  97.6% of total user, 94.9% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    9.67 real
+       Run 3 of command succeeded
+      +++ Executable appears self-timed!!:
+    SELFTIMED 7.30306
+    
+    Running trial 4 of 5:
+    ------------------------------------------------------------
+    Merge sorting 16,777,216 elements. First generate a random permutation:
+    Creating vector took 2.338 sec.
+    Executing monad-par based sort...
+    Beginning of sorted list:
+      fromList [0,1,2,3,4,5,6,7]
+    End of sorted list:
+      fromList [16777208,16777209,16777210,16777211,16777212,16777213,16777214,16777215]
+    Sorting vector took 7.288 sec.
+    SELFTIMED 7.288345
+      12,248,907,376 bytes allocated in the heap
+          18,952,544 bytes copied during GC
+         180,897,512 bytes maximum residency (31 sample(s))
+          40,762,008 bytes maximum slop
+                 470 MB total memory in use (14 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0     11493 colls,     0 par    0.21s    0.25s     0.0000s    0.0003s
+      Gen  1        31 colls,     0 par    0.02s    0.03s     0.0009s    0.0123s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :    7.09s    (  7.30s)       0.00s    (  0.00s)
+      Task  1 (worker) :    6.88s    (  7.05s)       0.22s    (  0.25s)
+      Task  2 (worker) :    9.41s    (  9.64s)       0.00s    (  0.00s)
+      Task  3 (bound)  :    9.40s    (  9.62s)       0.00s    (  0.02s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time    9.18s  (  9.35s elapsed)
+      GC      time    0.23s  (  0.28s elapsed)
+      EXIT    time   -0.00s  (  0.01s elapsed)
+      Total   time    9.40s  (  9.64s elapsed)
+    
+      Alloc rate    1,334,506,428 bytes per MUT second
+    
+      Productivity  97.6% of total user, 95.2% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    9.64 real
+       Run 4 of command succeeded
+      +++ Executable appears self-timed!!:
+    SELFTIMED 7.288345
+    
+    Running trial 5 of 5:
+    ------------------------------------------------------------
+    Merge sorting 16,777,216 elements. First generate a random permutation:
+    Creating vector took 2.327 sec.
+    Executing monad-par based sort...
+    Beginning of sorted list:
+      fromList [0,1,2,3,4,5,6,7]
+    End of sorted list:
+      fromList [16777208,16777209,16777210,16777211,16777212,16777213,16777214,16777215]
+    Sorting vector took 7.282 sec.
+    SELFTIMED 7.282498
+      12,248,907,328 bytes allocated in the heap
+          18,952,544 bytes copied during GC
+         180,897,512 bytes maximum residency (31 sample(s))
+          40,762,008 bytes maximum slop
+                 471 MB total memory in use (15 MB lost due to fragmentation)
+    
+                                        Tot time (elapsed)  Avg pause  Max pause
+      Gen  0     11493 colls,     0 par    0.20s    0.25s     0.0000s    0.0003s
+      Gen  1        31 colls,     0 par    0.01s    0.03s     0.0008s    0.0116s
+    
+      Parallel GC work balance: -nan (0 / 0, ideal 1)
+    
+                            MUT time (elapsed)       GC time  (elapsed)
+      Task  0 (worker) :    7.05s    (  7.29s)       0.00s    (  0.00s)
+      Task  1 (worker) :    6.84s    (  7.04s)       0.21s    (  0.25s)
+      Task  2 (worker) :    9.35s    (  9.62s)       0.00s    (  0.00s)
+      Task  3 (bound)  :    9.34s    (  9.60s)       0.01s    (  0.02s)
+    
+      SPARKS: 0 (0 converted, 0 overflowed, 0 dud, 0 GC'd, 0 fizzled)
+    
+      INIT    time    0.00s  (  0.00s elapsed)
+      MUT     time    9.13s  (  9.33s elapsed)
+      GC      time    0.22s  (  0.28s elapsed)
+      EXIT    time   -0.00s  (  0.01s elapsed)
+      Total   time    9.34s  (  9.62s elapsed)
+    
+      Alloc rate    1,341,961,435 bytes per MUT second
+    
+      Productivity  97.7% of total user, 94.8% of total elapsed
+    
+    gc_alloc_block_sync: 0
+    whitehole_spin: 0
+    gen[0].sync: 0
+    gen[1].sync: 0
+    9.63 real
+       Run 5 of command succeeded
+      +++ Executable appears self-timed!!:
+    SELFTIMED 7.282498
+    Final Timings/Productivities: 
+    Median time (of 5): 
+ >>> MIN/MEDIAN/MAX (TIME,PROD)  7.273425 7.282619 7.30306   97.095 97.098 97.098
+
+--------------------------------------------------------------------------------
+  Finished with all test configurations.
+--------------------------------------------------------------------------------
