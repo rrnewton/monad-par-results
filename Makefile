@@ -4,7 +4,8 @@ ifeq (,$(GHC))
   GHC= ghc
 endif
 
-all: plot_scaling.exe plot_ALL.exe compare_two.exe
+all: plot_scaling.exe plot_ALL.exe  compare_across_runs.exe
+# compare_two.exe
 
 
 plot_scaling.exe: plot_scaling.hs
@@ -13,6 +14,8 @@ plot_scaling.exe: plot_scaling.hs
 plot_ALL.exe: plot_ALL.hs
 	$(GHC) --make plot_ALL.hs -o plot_ALL.exe
 
+compare_across_runs.exe: compare_across_runs.hs
+	$(GHC) --make $^ -o $@
 
 
 
