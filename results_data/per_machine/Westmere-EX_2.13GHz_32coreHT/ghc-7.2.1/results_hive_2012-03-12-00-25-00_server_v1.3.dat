@@ -1,0 +1,98 @@
+# TestName Variant NumThreads   MinTime MedianTime MaxTime  Productivity1 Productivity2 Productivity3
+#    
+# Sun Mar 11 19:43:49 EDT 2012
+# Linux hive.soic.indiana.edu 2.6.32-220.4.2.el6.x86_64 #1 SMP Mon Feb 6 16:39:28 EST 2012 x86_64 x86_64 x86_64 GNU/Linux
+# Ran by: rrnewton 
+# Determined machine to have 32 hardware threads.
+# The Glorious Glasgow Haskell Compilation System, version 7.2.1
+# 
+# Running each test for 5 trial(s).
+#  ... with compiler options: -O2 -rtsopts
+#  ... with runtime options: -qa -A1M
+# Benchmarks_File: benchlist_server.txt
+# Benchmarks_Variant: server
+# Benchmarks_Version: 1.3
+# Git_Branch: meta
+# Git_Hash: 07e0e5b63367040b57102b6ca0b3de94a88fd65b
+# Git_Depth: 507
+# Using the following settings from environment variables:
+#  ENV BENCHLIST=benchlist_server.txt
+#  ENV THREADS=   1 2 4 8 12 16 20 24 28 32
+#  ENV TRIALS=    5
+#  ENV SHORTRUN=  
+#  ENV SCHEDS=    SMP
+#  ENV KEEPGOING= 1
+#  ENV GHC=       ghc-7.2.1
+#  ENV GHC_FLAGS= 
+#  ENV GHC_RTS=   -qa -A1M
+#  ENV ENVS=      
+blackscholes                        10000_30000000       SMP     1    33.74 33.75 33.75   99.288 99.288 99.288
+blackscholes                        10000_30000000       SMP     2    16.00 16.87 16.97   98.873 98.932 98.938
+blackscholes                        10000_30000000       SMP     4    8.31 8.58 8.59   98.313 98.247 98.366
+blackscholes                        10000_30000000       SMP     8    4.23 4.24 4.88   96.912 96.926 97.119
+blackscholes                        10000_30000000       SMP     12   2.92 2.92 3.61   95.517 95.862 95.277
+blackscholes                        10000_30000000       SMP     16   2.23 2.23 4.57   94.144 94.570 94.933
+blackscholes                        10000_30000000       SMP     20   1.83 1.83 2.22   92.777 92.817 92.272
+blackscholes                        10000_30000000       SMP     24   1.55 1.56 1.66   91.503 91.503 90.797
+blackscholes                        10000_30000000       SMP     28   1.37 1.38 1.38   89.629 88.970 89.629
+blackscholes                        10000_30000000       SMP     32   1.25 1.25 1.38   86.885 87.603 86.567
+nbody                               25000                SMP     1    21.64 21.64 21.65   99.768 99.815 99.815
+nbody                               25000                SMP     2    10.27 10.90 10.91   99.512 99.357 99.450
+nbody                               25000                SMP     4    5.35 5.53 5.55   98.691 98.913 98.375
+nbody                               25000                SMP     8    2.81 2.82 2.85   96.428 96.441 95.774
+nbody                               25000                SMP     12   1.99 2.10 2.77   93.434 94.258 95.306
+nbody                               25000                SMP     16   1.54 1.55 1.75   92.105 92.207 92.528
+nbody                               25000                SMP     20   1.29 1.36 1.66   89.062 90.370 92.073
+nbody                               25000                SMP     24   1.12 1.13 1.14   88.181 87.387 86.725
+nbody                               25000                SMP     28   0.99 1.02 1.18   86.734 85.148 84.615
+nbody                               25000                SMP     32   1.01 1.05 1.07   84.848 82.524 82.857
+mandel                              1024_1024_512        SMP     1    10.97 10.98 10.98   98.723 98.724 98.724
+mandel                              1024_1024_512        SMP     2    5.33 5.61 5.64   97.560 97.504 97.695
+mandel                              1024_1024_512        SMP     4    2.91 2.95 2.96   95.189 95.238 95.254
+mandel                              1024_1024_512        SMP     8    1.50 1.52 1.55   90.666 90.789 90.967
+mandel                              1024_1024_512        SMP     12   1.11 1.12 1.34   86.363 86.486 87.969
+mandel                              1024_1024_512        SMP     16   0.90 1.02 1.22   82.954 83.333 84.297
+mandel                              1024_1024_512        SMP     20   0.93 1.05 1.20   80.219 80.582 81.512
+mandel                              1024_1024_512        SMP     24   0.71 0.74 0.79   72.857 73.972 76.623
+mandel                              1024_1024_512        SMP     28   0.64 0.66 0.77   68.253 70.312 72.000
+mandel                              1024_1024_512        SMP     32   0.59 0.62 0.70   66.666 66.666 69.565
+coins                               8_1600               SMP     1    17.58 17.63 17.70   95.563 95.573 95.593
+coins                               8_1600               SMP     2    8.97 9.40 9.42   89.520 90.000 90.010
+coins                               8_1600               SMP     4    5.25 5.26 5.30   81.142 81.523 81.096
+coins                               8_1600               SMP     8    3.18 3.19 3.84   66.981 67.295 56.396
+coins                               8_1600               SMP     12   2.63 2.64 2.98   56.488 56.653 50.841
+coins                               8_1600               SMP     16   2.44 2.46 3.12   47.736 47.540 54.340
+coins                               8_1600               SMP     20   2.38 2.65 2.84   41.772 46.969 41.696
+coins                               8_1600               SMP     24   2.35 2.48 2.66   35.622 39.837 32.954
+coins                               8_1600               SMP     28   2.37 2.44 2.62   32.067 31.404 33.076
+coins                               8_1600               SMP     32   2.38 2.42 2.54   29.237 28.630 32.539
+matmult/MatMult                     1024_0_64            SMP     1    38.90 43.02 44.13   99.022 99.116 99.138
+matmult/MatMult                     1024_0_64            SMP     2    18.65 20.47 22.36   97.745 97.408 98.164
+matmult/MatMult                     1024_0_64            SMP     4    10.12 11.00 12.52   95.845 95.905 96.080
+matmult/MatMult                     1024_0_64            SMP     8    5.03 5.44 5.84   91.832 92.066 92.611
+matmult/MatMult                     1024_0_64            SMP     12   3.58 3.91 4.10   83.707 83.547 86.764
+matmult/MatMult                     1024_0_64            SMP     16   2.99 3.18 3.70   77.104 77.531 81.198
+matmult/MatMult                     1024_0_64            SMP     20   2.65 2.83 2.98   69.961 70.106 70.508
+matmult/MatMult                     1024_0_64            SMP     24   2.60 2.71 2.79   60.311 66.542 60.727
+matmult/MatMult                     1024_0_64            SMP     28   2.78 2.99 3.47   48.727 44.932 45.772
+matmult/MatMult                     1024_0_64            SMP     32   2.79 3.22 3.45   45.454 52.830 34.897
+sumeuler/sumeuler                   38_16000_100         SMP     1    23.69 23.69 23.69   99.577 99.577 99.577
+sumeuler/sumeuler                   38_16000_100         SMP     2    11.31 11.35 12.02   98.673 98.678 98.752
+sumeuler/sumeuler                   38_16000_100         SMP     4    5.95 6.11 6.14   97.138 97.381 97.068
+sumeuler/sumeuler                   38_16000_100         SMP     8    3.06 3.07 3.57   94.754 94.444 94.957
+sumeuler/sumeuler                   38_16000_100         SMP     12   2.17 2.17 2.65   90.783 91.203 90.943
+sumeuler/sumeuler                   38_16000_100         SMP     16   1.71 1.72 1.87   87.058 86.627 87.634
+sumeuler/sumeuler                   38_16000_100         SMP     20   1.44 1.44 1.73   83.333 83.916 84.302
+sumeuler/sumeuler                   38_16000_100         SMP     24   1.28 1.36 1.45   79.527 80.000 81.944
+sumeuler/sumeuler                   38_16000_100         SMP     28   1.17 1.17 1.26   75.652 75.862 77.419
+sumeuler/sumeuler                   38_16000_100         SMP     32   1.10 1.16 1.33   71.962 73.913 77.862
+sorting/mergesort                   cpu_24_8192          SMP     1    8.138242 8.149063 8.156676   97.363 97.370 97.276
+sorting/mergesort                   cpu_24_8192          SMP     2    4.847426 5.037246 5.070956   93.456 93.611 93.517
+sorting/mergesort                   cpu_24_8192          SMP     4    3.384041 3.488068 3.520977   90.518 90.316 89.877
+sorting/mergesort                   cpu_24_8192          SMP     8    2.690309 2.739978 2.791676   86.991 87.096 86.852
+sorting/mergesort                   cpu_24_8192          SMP     12   2.803466 2.831247 2.840737   81.299 81.568 81.250
+sorting/mergesort                   cpu_24_8192          SMP     16   2.903451 3.050584 3.17297   78.076 78.691 77.513
+sorting/mergesort                   cpu_24_8192          SMP     20   3.435927 3.468535 3.5456   73.529 74.706 72.959
+sorting/mergesort                   cpu_24_8192          SMP     24   3.654053 3.937006 4.025294   68.159 72.583 73.602
+sorting/mergesort                   cpu_24_8192          SMP     28   3.943397 4.171855 4.851934   69.266 70.873 70.867
+sorting/mergesort                   cpu_24_8192          SMP     32   4.359475 5.138805 5.178186   65.449 70.059 70.398

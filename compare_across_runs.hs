@@ -12,7 +12,8 @@ import ScriptHelpers
 
 benchs = ["blackscholes","nbody","mandel","coins","matmult/MatMult","sumeuler/sumeuler","sorting/mergesort"]
 
-vers =   ["GHC6123","GHC704","GHC721","GHC741"]
+-- vers =   ["GHC6123","GHC704","GHC721","GHC741"]
+vers =   ["GHC6123","GHC704","GHC721","GHC741","GHC741_noCAS"]
 
 files = 
   map ("results_data/parameter_studies/vary_ghcVer_32core_Westmere/" ++) $ 
@@ -41,7 +42,8 @@ main = do
 	       printf "   Filtering out bench %s in file %s\n" bench file
                -- Doing JUST trace for now:
 	       let hits = filter ((== bench) . name)    $
-			  filter ((== "Trace") . sched) $
+--			  filter ((== "Trace") . sched) $
+			  filter ((== "Direct") . sched) $
 			  dat
 	       printf "     Got %d hits: \n" (length hits)
 
